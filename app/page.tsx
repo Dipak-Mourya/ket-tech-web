@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { generateSEO, seoConfigs } from "@/lib/seo"
-import { HeroSection } from "@/components/sections/hero-section"
+
 import { DesignServices } from "@/components/sections/design-services"
 import { LatestProjects } from "@/components/sections/latest-projects"
 import { OurOfferings } from "@/components/our-offerings"
@@ -11,6 +11,7 @@ import { Location } from "@/components/location"
 import { MediaCoverage } from "@/components/media-coverage"
 import { FAQ } from "@/components/sections/faq"
 import { ContactForm } from "@/components/contact-form"
+import { HeroSection } from "@/components/sections/hero-section"
 
 export const metadata: Metadata = generateSEO(seoConfigs.home)
 
