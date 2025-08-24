@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <HeroSection />
-      <DesignServices />
+      {/* <DesignServices />
       <LatestProjects />
       <OurOfferings />
       <WhyChooseUs />
@@ -27,7 +27,7 @@ export default function Home() {
       <Location />
       <MediaCoverage />
       <FAQ />
-      <ContactForm />
+      <ContactForm /> */}
     </main>
   );
 }
