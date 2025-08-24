@@ -1,20 +1,36 @@
 "use client"
 
+import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
 
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    // Try to start playback as soon as the component mounts.
+    // Autoplay is allowed because the video is muted.
+    const p = v.play();
+    if (p && typeof p.catch === "function") {
+      p.catch(() => {
+        // ignore playback errors (some browsers may still block autoplay)
+      });
+    }
+  }, []);
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       <video
+        ref={videoRef}
         id="hero-video"
         className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none"
         autoPlay
         muted
         loop
         playsInline
-        preload="metadata"
+        preload="auto" // ask the browser to begin loading the resource early
+        poster="/placeholder.jpg" // show a lightweight poster while the video buffers
         draggable={false}
         onDragStart={(e) => e.preventDefault()}
         onContextMenu={(e) => e.preventDefault()}
