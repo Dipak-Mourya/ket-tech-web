@@ -41,7 +41,7 @@ export function LatestProjects() {
 
         <div className="text-center">
           <Link href="/projects">
-            <Button size="lg" className="cursor-pointer">
+            <Button size="lg" className="cursor-pointer bg-foreground">
               See More Projects
             </Button>
           </Link>

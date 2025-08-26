@@ -11,9 +11,9 @@ const WhatsAppButton = () => {
   return (
     <button
       onClick={openWhatsApp}
-      className="fixed z-[30] bottom-4 right-4 
+      className="fixed z-[30] bottom-3 right-4 
                  flex items-center justify-center 
-                 bg-accent text-white cursor-pointer 
+                 bg-neutral-800 text-white cursor-pointer 
                  transition-all duration-300
                  p-3 md:px-6 md:py-3 
                  rounded-full md:rounded-4xl xl:rounded-4xl lg:rounded-4xl

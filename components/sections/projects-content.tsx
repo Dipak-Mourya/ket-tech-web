@@ -100,7 +100,7 @@ export function ProjectsContent() {
                     <div className="flex justify-center mb-4">
                       <div className="flex space-x-1">
                         {[...Array(review.rating)].map((_, i) => (
-                          <Star key={i} className="h-5 w-5 fill-red-600 text-red-600" />
+                          <Star key={i} className="h-5 w-5 fill-yellow-500 text-yellow-500" />
                         ))}
                       </div>
                     </div>
@@ -118,7 +118,7 @@ export function ProjectsContent() {
 
             <div className="flex justify-center items-center space-x-6 mt-8">
               <button
-                className="w-12 h-12 bg-accent hover:bg-accent/90 text-accent-foreground rounded-full flex items-center justify-center cursor-pointer transition-colors shadow-md"
+                className="w-9 h-9 bg-accent hover:bg-accent/90 text-accent-foreground rounded-full flex items-center justify-center cursor-pointer transition-colors shadow-md"
                 onClick={() => {
                   const swiper = (document.querySelector(".reviews-swiper") as any)?.swiper
                   if (swiper) swiper.slidePrev()
@@ -130,7 +130,7 @@ export function ProjectsContent() {
               <div className="swiper-pagination !static !w-auto flex space-x-2"></div>
 
               <button
-                className="w-12 h-12 bg-accent hover:bg-accent/90 text-accent-foreground rounded-full flex items-center justify-center cursor-pointer transition-colors shadow-md"
+                className="w-9 h-9 bg-accent hover:bg-accent/90 text-accent-foreground rounded-full flex items-center justify-center cursor-pointer transition-colors shadow-md"
                 onClick={() => {
                   const swiper = (document.querySelector(".reviews-swiper") as any)?.swiper
                   if (swiper) swiper.slideNext()
@@ -145,7 +145,7 @@ export function ProjectsContent() {
             <Button
               size="lg"
               variant="outline"
-              className="font-serif font-medium border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent cursor-pointer"
+              className="font-serif font-medium border-accent text-accent hover:bg-accent-foreground hover:text-accent  bg-transparent cursor-pointer"
               onClick={() => window.open("https://www.google.com/search?q=KET+Design+reviews", "_blank")}
             >
               More Reviews

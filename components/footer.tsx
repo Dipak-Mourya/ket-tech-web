@@ -2,7 +2,7 @@ import { Facebook, Instagram, Linkedin, Paintbrush as Pinterest, Twitter, Youtub
 
 export function Footer() {
   return (
-    <footer className="bg-foreground text-background py-16">
+    <footer className="bg-neutral-800 text-background py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
@@ -63,10 +63,9 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-background/20 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <p className="font-manrope text-sm opacity-70">© 2025 KET Design | Designed & Crafted By A2 Digital</p>
+          <p className="font-manrope text-sm opacity-70"> © {new Date().getFullYear()} Ket Design. All rights reserved.</p>
           <div className="flex space-x-6 font-manrope text-sm opacity-70">
-            <span className="hover:opacity-100 cursor-pointer transition-opacity">Terms & Conditions</span>
-            <span className="hover:opacity-100 cursor-pointer transition-opacity">Privacy Policy</span>
+            <span className="hover:opacity-100 cursor-auto transition-opacity">Designed & Crafted By ZapCode</span>
           </div>
         </div>
       </div>

@@ -91,13 +91,13 @@ export function Header() {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden bg-accent font-extrabold cursor-pointer"
+            className="md:hidden bg-neutral-800 font-extrabold cursor-pointer"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
-              <X className="h-10 w-10 stroke-[2] rounded-lg bg-accent p-0 text-accent-foreground font-extrabold cursor-pointer" size={24}/>
+              <X className="h-10 w-10 stroke-[2] rounded-lg bg-neutral-800 p-0 text-accent-foreground font-extrabold cursor-pointer" size={24}/>
             ) : (
-              <Menu className="h-20 w-20 stroke-[2] rounded-lg bg-accent p-0 text-accent-foreground font-extrabold cursor-pointer" size={24}/>
+              <Menu className="h-20 w-20 stroke-[2] rounded-lg bg-neutral-800 p-0 text-accent-foreground font-extrabold cursor-pointer" size={24}/>
             )}
           </Button>
         </div>

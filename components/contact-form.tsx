@@ -126,7 +126,7 @@ export function ContactForm() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-manrope font-medium"
+                  className="w-full bg-foreground  text-accent-foreground font-manrope font-medium"
                 >
                   Send Message
                 </Button>
