@@ -5,8 +5,7 @@ import "./globals.css"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { WhatsAppButton } from "@/components/whatsapp-button"
-
+import WhatsAppButton from "@/components/whatsapp-button"
 
 const manrope = Manrope({
   subsets: ["latin"],

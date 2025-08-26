@@ -100,7 +100,7 @@ export function ProjectsContent() {
                     <div className="flex justify-center mb-4">
                       <div className="flex space-x-1">
                         {[...Array(review.rating)].map((_, i) => (
-                          <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                          <Star key={i} className="h-5 w-5 fill-red-600 text-red-600" />
                         ))}
                       </div>
                     </div>
