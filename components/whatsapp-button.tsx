@@ -1,23 +1,38 @@
 "use client"
+import React from 'react';
 
-import { MessageCircle } from "lucide-react"
-import { Button } from "@/components/ui/button"
+const openWhatsApp = () => {
+  const message = encodeURIComponent('Hello, I have a question regarding PAWAN.');
+  const phoneNumber = '+918069543300';
+  window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+};
 
-export function WhatsAppButton() {
-  const handleWhatsAppClick = () => {
-    const phoneNumber = "919876543210" // Replace with actual WhatsApp number
-    const message = "Hi! I am interested in your interior design services."
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
-    window.open(whatsappUrl, "_blank")
-  }
-
+const WhatsAppButton = () => {
   return (
-    <Button
-      onClick={handleWhatsAppClick}
-      size="icon"
-      className="fixed bottom-6 right-6 z-40 h-14 w-14 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+    <button
+      onClick={openWhatsApp}
+      className="fixed z-[30] bottom-3 right-4 
+                 flex items-center justify-center 
+                 bg-neutral-800 text-white cursor-pointer 
+                 transition-all duration-300
+                 p-3 md:px-6 md:py-3 
+                 rounded-full md:rounded-4xl xl:rounded-4xl lg:rounded-4xl
+                 shadow-lg"
     >
-      <MessageCircle className="h-6 w-6" />
-    </Button>
-  )
-}
+      {/* WhatsApp Logo */}
+      <img
+        src="/whatsapp-logo-trans.png"
+        alt="WhatsApp Logo"
+        width="24"
+        height="24"
+      />
+
+      {/* Text only on md and above */}
+      <span className="hidden md:inline-block ml-2 text-sm sm:text-base">
+        WhatsApp Us
+      </span>
+    </button>
+  );
+};
+
+export default WhatsAppButton;

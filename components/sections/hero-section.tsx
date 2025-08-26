@@ -37,13 +37,6 @@ export function HeroSection() {
               Experience the highest level of transparency in interior design,
               with complete peace of mind.
             </p>
-
-            <a
-              href="/projects"
-              className="inline-block bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3 text-lg"
-            >
-              Discover More
-            </a>
           </div>
         </div>
       </div>

@@ -31,7 +31,7 @@ export function Statistics() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
           {statisticsData.map((stat) => (
             <div key={stat.id} className="space-y-2">
-              <div className="font-sans font-bold text-4xl md:text-5xl text-accent">
+              <div className="font-sans font-bold text-4xl md:text-5xl text-foreground">
                 {isVisible && (
                   <CountUp
                     end={Number.parseInt(stat.number)}

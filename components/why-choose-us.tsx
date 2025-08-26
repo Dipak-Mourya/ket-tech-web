@@ -33,7 +33,7 @@ export function WhyChooseUs() {
             </div>
             <Button
               size="lg"
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-manrope font-medium cursor-pointer"
+              className="bg-foreground  text-accent-foreground font-manrope font-medium cursor-pointer"
               onClick={() => scrollToSection("contact")}
             >
               Let's Connect →

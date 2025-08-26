@@ -136,7 +136,7 @@ export default function About() {
             <Link href="/projects">
               <Button
                 size="lg"
-                className="bg-accent hover:bg-accent/90 text-accent-foreground font-serif font-medium cursor-pointer"
+                className="bg-foreground 0 text-accent-foreground font-serif font-medium cursor-pointer"
               >
                 View Our Projects
               </Button>
