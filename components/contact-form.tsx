@@ -92,7 +92,7 @@ export function ContactForm() {
         body: JSON.stringify({
           ...formData,
           access_key: "97745d79-bd88-42c0-bd6d-fa51d2d1516e",
-          subject: "New Contact Form Submission",
+          subject: "New Contact Form Submission - Interior Design Services",
           botcheck: "",
         }),
       });
