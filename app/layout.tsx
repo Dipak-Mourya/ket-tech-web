@@ -35,7 +35,7 @@ export default function RootLayout({
         <Footer />
         <WhatsAppButton />
         {/* Toast notifications provider */}
-        <Toaster position="top-right" />
+        <Toaster position="top-center" />
       </body>
     </html>
   );
