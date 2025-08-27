@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
@@ -8,6 +8,16 @@ import { useRouter, usePathname } from "next/navigation";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Change header opacity on scroll
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   const router = useRouter();
   const pathname = usePathname();
 
@@ -40,7 +50,11 @@ export function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-b border-border transition-all duration-300 ${
+        scrolled ? "bg-background/70" : "bg-background/95"
+      }`}
+    >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="font-geist font-bold text-2xl text-foreground">
@@ -81,9 +95,9 @@ export function Header() {
             </Link>
             <Button
               onClick={handleContactClick}
-              className="font-manrope cursor-pointer px-4 py-2  bg-foreground text-white border-b-2 transition-colors rounded-lg"
+              className="font-manrope cursor-pointer px-4 py-2  bg-foreground text-white border-b-2 transition-colors rounded-lg "
             >
-              Contact
+              Appointment
             </Button>
           </nav>
 
@@ -142,9 +156,9 @@ export function Header() {
 
               <Button
                 onClick={handleContactClick}
-                className="font-manrope cursor-pointer px-4 py-2  bg-foreground text-white border-b-2 transition-colors rounded-lg w-[5rem]"
+                className="font-manrope cursor-pointer px-4 py-2  bg-foreground text-white border-b-2 transition-colors rounded-lg w-[7rem]"
               >
-                Contact
+                Appointment
               </Button>
             </div>
           </nav>

@@ -21,7 +21,7 @@ const WhatsAppButton = () => {
     >
       {/* WhatsApp Logo */}
       <img
-        src="/whatsapp-logo-trans.png"
+        src="socials/whatsapp.png"
         alt="WhatsApp Logo"
         width="24"
         height="24"
