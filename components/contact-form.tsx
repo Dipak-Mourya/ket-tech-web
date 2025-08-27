@@ -12,8 +12,9 @@ import {
   SelectTrigger,
   SelectValue,
   SelectContent,
-  SelectItem
+  SelectItem,
 } from "@/components/ui/select";
+import { AppToast } from "@/lib/app-toast";
 
 export function ContactForm() {
   type FormData = {
@@ -99,7 +100,7 @@ export function ContactForm() {
       const json = await response.json();
 
       if (response.ok) {
-        setStatus("Thank you! Your message has been sent.");
+        AppToast.success("Thank you for contacting us!");
         setFormData({
           firstName: "",
           lastName: "",
@@ -110,11 +111,13 @@ export function ContactForm() {
         });
         setErrors({});
       } else {
-        setStatus(json.message || "Something went wrong. Please try again.");
+        AppToast.error(
+          json.message || "Something went wrong. Please try again."
+        );
       }
     } catch (error) {
       console.error(error);
-      setStatus("Something went wrong. Please try again later.");
+      AppToast.error("Something went wrong. Please try again later.");
     } finally {
       setIsSubmitting(false);
     }
@@ -162,7 +165,7 @@ export function ContactForm() {
                 <input
                   type="hidden"
                   name="subject"
-                  value="New Contact Form Submission"
+                  value="New Contact Form Submission - Interior Design Services"
                 />
                 <input
                   type="checkbox"
@@ -254,12 +257,19 @@ export function ContactForm() {
                       } as React.ChangeEvent<HTMLSelectElement>);
                     }}
                   >
-                    <SelectTrigger id="services" className="font-manrope w-full bg-white text-black border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <SelectTrigger
+                      id="services"
+                      className="font-manrope w-full bg-white text-black border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    >
                       <SelectValue placeholder="Select a service" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="Design Thinking">Design Thinking</SelectItem>
-                      <SelectItem value="Interior Design">Interior Design</SelectItem>
+                      <SelectItem value="Design Thinking">
+                        Design Thinking
+                      </SelectItem>
+                      <SelectItem value="Interior Design">
+                        Interior Design
+                      </SelectItem>
                       <SelectItem value="3D Design">3D Design</SelectItem>
                     </SelectContent>
                   </Select>
@@ -317,18 +327,6 @@ export function ContactForm() {
                     Reset
                   </Button>
                 </div>
-
-                {status && (
-                  <p
-                    className={`text-center text-sm mt-4 ${
-                      status.startsWith("✅")
-                        ? "text-green-600"
-                        : "text-red-500"
-                    }`}
-                  >
-                    {status}
-                  </p>
-                )}
               </form>
             </CardContent>
           </Card>
