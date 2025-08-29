@@ -20,7 +20,7 @@ export default function About() {
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 text-center">
-          <h1 className="font-sans font-bold text-4xl md:text-5xl text-white mb-4">About {companyInfo.name}</h1>
+          <h1 className="font-serif font-bold text-4xl md:text-5xl text-white mb-4">About {companyInfo.name}</h1>
           <p className="font-serif text-xl text-white/90">{companyInfo.tagline}</p>
         </div>
       </section>
@@ -29,7 +29,7 @@ export default function About() {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-sans font-bold text-3xl md:text-4xl text-foreground mb-8 text-center">Our Story</h2>
+            <h2 className="font-serif font-bold text-3xl md:text-4xl text-foreground mb-8 text-center">Our Story</h2>
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="font-serif text-lg text-muted-foreground mb-6 leading-relaxed">
@@ -84,7 +84,7 @@ export default function About() {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-sans font-bold text-3xl md:text-4xl text-foreground mb-12 text-center">
+            <h2 className="font-serif font-bold text-3xl md:text-4xl text-foreground mb-12 text-center">
               Services & Achievements
             </h2>
             <div className="grid md:grid-cols-2 gap-12">
@@ -123,7 +123,7 @@ export default function About() {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-sans font-bold text-3xl md:text-4xl text-foreground mb-8">Future Goals</h2>
+            <h2 className="font-serif font-bold text-3xl md:text-4xl text-foreground mb-8">Future Goals</h2>
             <p className="font-serif text-lg text-muted-foreground mb-8 leading-relaxed">
               As we look ahead, {companyInfo.name} is committed to expanding our reach while maintaining the highest
               standards of quality and service. Our future goals include embracing sustainable design practices,

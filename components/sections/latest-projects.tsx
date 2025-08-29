@@ -31,7 +31,7 @@ export function LatestProjects() {
                   />
                 </div>
                 <div className="p-4">
-                  <h3 className="font-semibold mb-2 font-serif">{project.title}</h3>
+                  <h3 className="font-semibold mb-2 font-serif text-foreground">{project.title}</h3>
                   <span className="text-sm text-accent font-medium">{project.category}</span>
                 </div>
               </CardContent>

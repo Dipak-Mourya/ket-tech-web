@@ -1,15 +1,16 @@
 "use client"
 
 import type React from "react"
-import { Manrope } from "next/font/google"
+import { Poppins } from "next/font/google"
 import { useEffect } from "react"
 import { usePathname } from "next/navigation"
 
 
-const manrope = Manrope({
+const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-manrope",
+  variable: "--font-poppins",
+  weight: ["300", "400", "500", "600", "700"],
 })
 
 // <CHANGE> Added scroll reset functionality for page navigation
@@ -29,7 +30,7 @@ export default function ClientLayout({
   children: React.ReactNode
 }>) {
   return (
-  <html lang="en" className={`${manrope.variable} antialiased`}>
+  <html lang="en" className={`${poppins.variable} antialiased`}>
       <body>
         <ScrollToTop />
         {children}

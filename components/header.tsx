@@ -57,7 +57,7 @@ export function Header() {
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="font-geist font-bold text-2xl text-foreground">
+          <div className="font-sans font-bold text-2xl text-foreground">
             KET Design
           </div>
 
@@ -65,7 +65,7 @@ export function Header() {
           <nav className="hidden md:flex items-center space-x-8 font-medium">
             <Link
               href="/"
-              className={`font-manrope cursor-pointer pb-1 border-b-2 transition-colors ${
+              className={`font-sans cursor-pointer pb-1 border-b-2 transition-colors ${
                 pathname === "/"
                   ? "text-foreground border-foreground"
                   : "text-accent border-transparent "
@@ -75,7 +75,7 @@ export function Header() {
             </Link>
             <Link
               href="/about"
-              className={`font-manrope cursor-pointer pb-1 border-b-2 transition-colors ${
+              className={`font-sans cursor-pointer pb-1 border-b-2 transition-colors ${
                 pathname === "/about"
                   ? "text-foreground border-foreground"
                   : "text-accent border-transparent "
@@ -85,7 +85,7 @@ export function Header() {
             </Link>
             <Link
               href="/projects"
-              className={`font-manrope cursor-pointer pb-1 border-b-2 transition-colors ${
+              className={`font-sans cursor-pointer pb-1 border-b-2 transition-colors ${
                 pathname === "/projects"
                   ? "text-foreground border-foreground"
                   : "text-accent border-transparent "
@@ -95,7 +95,7 @@ export function Header() {
             </Link>
             <Button
               onClick={handleContactClick}
-              className="font-manrope cursor-pointer px-4 py-2  bg-foreground text-white border-b-2 transition-colors rounded-lg "
+              className="font-sans cursor-pointer px-4 py-2  bg-foreground text-white border-b-2 transition-colors rounded-lg "
             >
               Appointment
             </Button>
@@ -122,7 +122,7 @@ export function Header() {
             <div className="flex flex-col space-y-4">
               <Link
                 href="/"
-                className={`font-manrope cursor-pointer pb-1 border-b-2 transition-colors inline-block w-fit ${
+                className={`font-sans cursor-pointer pb-1 border-b-2 transition-colors inline-block w-fit ${
                   pathname === "/"
                     ? "text-foreground border-foreground"
                     : "text-accent border-transparent "
@@ -133,7 +133,7 @@ export function Header() {
               </Link>
               <Link
                 href="/about"
-                className={`font-manrope cursor-pointer pb-1 border-b-2 transition-colors inline-block w-fit ${
+                className={`font-sans cursor-pointer pb-1 border-b-2 transition-colors inline-block w-fit ${
                   pathname === "/about"
                     ? "text-foreground border-foreground"
                     : "text-accent border-transparent "
@@ -144,7 +144,7 @@ export function Header() {
               </Link>
               <Link
                 href="/projects"
-                className={`font-manrope cursor-pointer pb-1 border-b-2 transition-colors inline-block w-fit ${
+                className={`font-sans cursor-pointer pb-1 border-b-2 transition-colors inline-block w-fit ${
                   pathname === "/projects"
                     ? "text-foreground border-foreground"
                     : "text-accent border-transparent "
@@ -156,7 +156,7 @@ export function Header() {
 
               <Button
                 onClick={handleContactClick}
-                className="font-manrope cursor-pointer px-4 py-2  bg-foreground text-white border-b-2 transition-colors rounded-lg w-[7rem]"
+                className="font-sans cursor-pointer px-4 py-2  bg-foreground text-white border-b-2 transition-colors rounded-lg w-[7rem]"
               >
                 Appointment
               </Button>

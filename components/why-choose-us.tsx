@@ -16,24 +16,24 @@ export function WhyChooseUs() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="font-geist font-bold text-3xl md:text-4xl text-foreground mb-6">Why Choose Us?</h2>
+            <h2 className="font-serif font-bold text-3xl md:text-4xl text-foreground mb-6">Why Choose Us?</h2>
             <div className="space-y-4 mb-8">
-              <p className="font-manrope text-lg text-muted-foreground leading-relaxed">
+              <p className="font-sans text-lg text-muted-foreground leading-relaxed">
                 With over 18 years of experience in the interior design industry, KET Design has established itself as
                 Kolkata's premier interior design firm.
               </p>
-              <p className="font-manrope text-lg text-muted-foreground leading-relaxed">
+              <p className="font-sans text-lg text-muted-foreground leading-relaxed">
                 We believe in complete transparency, fixed pricing, and delivering exceptional quality that exceeds
                 expectations. Our dedicated team works closely with you to bring your vision to life.
               </p>
-              <p className="font-manrope text-lg text-muted-foreground leading-relaxed">
+              <p className="font-sans text-lg text-muted-foreground leading-relaxed">
                 From concept to completion, we ensure every detail is perfect, giving you complete peace of mind
                 throughout the design process.
               </p>
             </div>
             <Button
               size="lg"
-              className="bg-foreground  text-accent-foreground font-manrope font-medium cursor-pointer"
+              className="bg-foreground  text-accent-foreground font-sans font-medium cursor-pointer"
               onClick={() => scrollToSection("contact")}
             >
               Let's Connect →

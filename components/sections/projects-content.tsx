@@ -25,7 +25,7 @@ export function ProjectsContent() {
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 text-center">
-          <h1 className="font-sans font-bold text-4xl md:text-5xl text-white mb-4">Our Projects</h1>
+          <h1 className="font-serif font-bold text-4xl md:text-5xl text-white mb-4">Our Projects</h1>
           <p className="font-serif text-xl text-white/90">Showcasing Excellence in Interior Design</p>
         </div>
       </section>
@@ -34,7 +34,7 @@ export function ProjectsContent() {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-sans font-bold text-3xl md:text-4xl text-foreground mb-4">Featured Projects</h2>
+            <h2 className="font-serif font-bold text-3xl md:text-4xl text-foreground mb-4">Featured Projects</h2>
             <p className="font-serif text-lg text-muted-foreground max-w-2xl mx-auto">
               Discover our portfolio of stunning interior design projects across residential and commercial spaces.
             </p>
@@ -50,13 +50,13 @@ export function ProjectsContent() {
                     className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-serif">
+                    <span className="bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-sans">
                       {project.category}
                     </span>
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="font-sans font-semibold text-xl text-foreground mb-2">{project.title}</h3>
+                  <h3 className="font-serif font-semibold text-xl text-foreground mb-2">{project.title}</h3>
                   <p className="font-serif text-muted-foreground">
                     Professional interior design with attention to detail
                   </p>
@@ -71,7 +71,7 @@ export function ProjectsContent() {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-sans font-bold text-3xl md:text-4xl text-foreground mb-4">Client Reviews</h2>
+            <h2 className="font-serif font-bold text-3xl md:text-4xl text-foreground mb-4">Client Reviews</h2>
             <p className="font-serif text-lg text-muted-foreground max-w-2xl mx-auto">
               Read what our satisfied clients have to say about their experience with KET Design.
             </p>
