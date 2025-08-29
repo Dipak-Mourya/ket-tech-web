@@ -15,7 +15,7 @@ const WhatsAppButton = () => {
     <div className="fixed z-[30] bottom-5 right-4 flex flex-col items-end">
       {/* Chat us text with cross */}
       {showText && (
-        <div className="flex items-center gap-2 mb-2 bg-white rounded-full px-3 py-1 shadow-md border border-gray-200">
+        <div className="flex items-center gap-2 mb-3 bg-white rounded-full px-3 py-1 shadow-md border border-gray-200">
           <span className="text-sm font-medium text-gray-700">Chat us</span>
           <button
             onClick={() => setShowText(false)}
@@ -30,7 +30,7 @@ const WhatsAppButton = () => {
       {/* WhatsApp Icon Button */}
       <button
         onClick={openWhatsApp}
-        className="cursor-pointer"
+        className="cursor-pointer animate-bounce"
       >
         {/* WhatsApp Logo */}
         <img
