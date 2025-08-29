@@ -36,8 +36,8 @@ export function LatestProjects() {
     <section id="projects" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="font-geist font-bold text-3xl md:text-4xl text-foreground mb-4">Latest Projects</h2>
-          <p className="font-manrope text-lg text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="font-sans font-bold text-3xl md:text-4xl text-foreground mb-4">Latest Projects</h2>
+          <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto">
             Explore our recent interior design transformations that showcase our commitment to excellence and attention
             to detail.
           </p>
@@ -67,7 +67,7 @@ export function LatestProjects() {
             <Button
               size="lg"
               variant="outline"
-              className="font-manrope font-medium border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent cursor-pointer"
+              className="font-sans font-medium border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent cursor-pointer"
             >
               See More Projects
             </Button>

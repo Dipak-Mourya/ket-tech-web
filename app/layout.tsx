@@ -1,6 +1,6 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ScrollToTop } from "@/components/scroll-to-top";
 import { Header } from "@/components/header";
@@ -8,10 +8,11 @@ import { Footer } from "@/components/footer";
 import WhatsAppButton from "@/components/whatsapp-button";
 import { Toaster } from "react-hot-toast";
 
-const manrope = Manrope({
+const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-manrope",
+  variable: "--font-poppins",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -27,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${manrope.variable} antialiased`}>
+    <html lang="en" className={`${poppins.variable} antialiased`}>
       <body>
         <ScrollToTop />
         <Header />

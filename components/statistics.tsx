@@ -36,12 +36,12 @@ export function Statistics() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           {stats.map((stat, index) => (
             <div key={index} className="space-y-2">
-              <div className="font-geist font-bold text-4xl md:text-5xl text-accent">
+              <div className="font-sans font-bold text-4xl md:text-5xl text-accent">
                 {isVisible && (
                   <CountUp end={stat.number} duration={2} decimals={stat.number === 4.9 ? 1 : 0} suffix={stat.suffix} />
                 )}
               </div>
-              <p className="font-manrope text-lg text-muted-foreground">{stat.label}</p>
+              <p className="font-sans text-lg text-muted-foreground">{stat.label}</p>
             </div>
           ))}
         </div>

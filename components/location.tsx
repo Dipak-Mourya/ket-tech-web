@@ -3,7 +3,7 @@ export function Location() {
     <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="font-geist font-bold text-3xl md:text-4xl text-foreground mb-4">How To Reach Us</h2>
+          <h2 className="font-serif font-bold text-3xl md:text-4xl text-foreground mb-4">How To Reach Us</h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -22,24 +22,24 @@ export function Location() {
 
           <div className="space-y-6">
             <div>
-              <h3 className="font-geist font-semibold text-xl text-foreground mb-3">Visit Our Office</h3>
-              <p className="font-manrope text-muted-foreground leading-relaxed">
+              <h3 className="font-sans font-semibold text-xl text-foreground mb-3">Visit Our Office</h3>
+              <p className="font-sans text-muted-foreground leading-relaxed">
                 Shop No. 6, ARUN PARK, S.No.33/3, near Aditya Birla Hospital Marg, Datta Nagar, Thergaon, PUNE,
                 Maharashtra 411033
               </p>
             </div>
 
             <div>
-              <h3 className="font-geist font-semibold text-xl text-foreground mb-3">Contact Information</h3>
-              <div className="space-y-2 font-manrope text-muted-foreground">
+              <h3 className="font-sans font-semibold text-xl text-foreground mb-3">Contact Information</h3>
+              <div className="space-y-2 font-sans text-muted-foreground">
                 <p>📞 020-71177198</p>
                 <p>✉ inquiry@kamsdesigner.com</p>
               </div>
             </div>
 
             <div>
-              <h3 className="font-geist font-semibold text-xl text-foreground mb-3">Business Hours</h3>
-              <div className="space-y-1 font-manrope text-muted-foreground">
+              <h3 className="font-sans font-semibold text-xl text-foreground mb-3">Business Hours</h3>
+              <div className="space-y-1 font-sans text-muted-foreground">
                 <p>Mon–Sat: 9:30 AM – 7:00 PM</p>
                 <p>Sun: Closed</p>
               </div>

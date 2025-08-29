@@ -26,8 +26,8 @@ export function MediaCoverage() {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="font-geist font-bold text-3xl md:text-4xl text-foreground mb-4">Media Coverage</h2>
-          <p className="font-manrope text-lg text-muted-foreground">Featured in leading publications</p>
+          <h2 className="font-serif font-bold text-3xl md:text-4xl text-foreground mb-4">Media Coverage</h2>
+          <p className="font-sans text-lg text-muted-foreground">Featured in leading publications</p>
         </div>
 
         <div className="overflow-hidden">

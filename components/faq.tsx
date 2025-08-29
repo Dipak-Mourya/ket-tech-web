@@ -53,8 +53,8 @@ export function FAQ() {
     <section className="py-16 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="font-geist font-bold text-3xl md:text-4xl text-foreground mb-4">Frequently Asked Questions</h2>
-          <p className="font-manrope text-lg text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="font-serif font-bold text-3xl md:text-4xl text-foreground mb-4">Frequently Asked Questions</h2>
+          <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto">
             Find answers to common questions about our interior design services and process.
           </p>
         </div>
@@ -67,7 +67,7 @@ export function FAQ() {
                   className="w-full p-6 text-left flex items-center justify-between hover:bg-muted/50 transition-colors cursor-pointer"
                   onClick={() => toggleFAQ(index)}
                 >
-                  <h3 className="font-geist font-semibold text-lg text-foreground pr-4">{faq.question}</h3>
+                  <h3 className="font-sans font-semibold text-lg text-foreground pr-4">{faq.question}</h3>
                   {openIndex === index ? (
                     <ChevronUp className="h-5 w-5 text-accent flex-shrink-0" />
                   ) : (
@@ -76,7 +76,7 @@ export function FAQ() {
                 </button>
                 {openIndex === index && (
                   <div className="px-6 pb-6">
-                    <p className="font-manrope text-muted-foreground leading-relaxed">{faq.answer}</p>
+                    <p className="font-sans text-muted-foreground leading-relaxed">{faq.answer}</p>
                   </div>
                 )}
               </CardContent>

@@ -140,10 +140,10 @@ export function ContactForm() {
     <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="font-geist font-bold text-3xl md:text-4xl text-foreground mb-4">
+          <h2 className="font-serif font-bold text-3xl md:text-4xl text-foreground mb-4">
             Get In Touch
           </h2>
-          <p className="font-manrope text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto">
             Ready to transform your space? Contact us today for a consultation
             and let's bring your vision to life.
           </p>
@@ -151,7 +151,7 @@ export function ContactForm() {
         <div className="max-w-2xl mx-auto">
           <Card>
             <CardHeader>
-              <CardTitle className="font-geist text-2xl text-center">
+              <CardTitle className="font-sans text-2xl text-center">
                 Contact Form
               </CardTitle>
             </CardHeader>
@@ -174,7 +174,7 @@ export function ContactForm() {
                 />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="firstName" className="font-manrope">
+                    <Label htmlFor="firstName" className="font-sans">
                       First Name *
                     </Label>
                     <Input
@@ -182,7 +182,7 @@ export function ContactForm() {
                       name="firstName"
                       value={formData.firstName}
                       onChange={handleChange}
-                      className="font-manrope text-black bg-white"
+                      className="font-sans text-black bg-white"
                     />
                     {errors.firstName && (
                       <div className="text-red-500 text-sm mt-1">
@@ -191,7 +191,7 @@ export function ContactForm() {
                     )}
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="lastName" className="font-manrope">
+                    <Label htmlFor="lastName" className="font-sans">
                       Last Name *
                     </Label>
                     <Input
@@ -199,7 +199,7 @@ export function ContactForm() {
                       name="lastName"
                       value={formData.lastName}
                       onChange={handleChange}
-                      className="font-manrope text-black bg-white"
+                      className="font-sans text-black bg-white"
                     />
                     {errors.lastName && (
                       <div className="text-red-500 text-sm mt-1">
@@ -210,7 +210,7 @@ export function ContactForm() {
                 </div>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="email" className="font-manrope">
+                    <Label htmlFor="email" className="font-sans">
                       Email *
                     </Label>
                     <Input
@@ -219,7 +219,7 @@ export function ContactForm() {
                       type="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className="font-manrope text-black bg-white"
+                      className="font-sans text-black bg-white"
                     />
                     {errors.email && (
                       <div className="text-red-500 text-sm mt-1">
@@ -228,7 +228,7 @@ export function ContactForm() {
                     )}
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="phone" className="font-manrope">
+                    <Label htmlFor="phone" className="font-sans">
                       Phone *
                     </Label>
                     <Input
@@ -236,7 +236,7 @@ export function ContactForm() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="font-manrope text-black bg-white"
+                      className="font-sans text-black bg-white"
                     />
                     {errors.phone && (
                       <div className="text-red-500 text-sm mt-1">
@@ -246,7 +246,7 @@ export function ContactForm() {
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="services" className="font-manrope">
+                  <Label htmlFor="services" className="font-sans">
                     Services *
                   </Label>
                   <Select
@@ -259,7 +259,7 @@ export function ContactForm() {
                   >
                     <SelectTrigger
                       id="services"
-                      className="font-manrope w-full bg-white text-black border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="font-sans w-full bg-white text-black border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     >
                       <SelectValue placeholder="Select a service" />
                     </SelectTrigger>
@@ -280,7 +280,7 @@ export function ContactForm() {
                   )}
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="message" className="font-manrope">
+                  <Label htmlFor="message" className="font-sans">
                     Message *
                   </Label>
                   <Textarea
@@ -289,7 +289,7 @@ export function ContactForm() {
                     value={formData.message}
                     onChange={handleChange}
                     rows={5}
-                    className="font-manrope text-black bg-white"
+                    className="font-sans text-black bg-white"
                   />
                   {errors.message && (
                     <div className="text-red-500 text-sm mt-1">
@@ -302,7 +302,7 @@ export function ContactForm() {
                     type="submit"
                     size="sm"
                     disabled={isSubmitting}
-                    className="md:w-32 w-32 bg-foreground text-accent-foreground font-manrope font-medium cursor-pointer"
+                    className="md:w-32 w-32 bg-foreground text-accent-foreground font-sans font-medium cursor-pointer"
                   >
                     {isSubmitting ? "Sending..." : "Submit"}
                   </Button>
@@ -310,7 +310,7 @@ export function ContactForm() {
                     type="button"
                     size="sm"
                     disabled={isSubmitting}
-                    className="md:w-32 w-32 bg-foreground text-white font-manrope font-medium cursor-pointer"
+                    className="md:w-32 w-32 bg-foreground text-white font-sans font-medium cursor-pointer"
                     onClick={() => {
                       setFormData({
                         firstName: "",
