@@ -157,7 +157,7 @@ Please provide me with a detailed quote.`;
           </p>
         )}
         {errors.contact && (
-          <p className="text-red-500 text-sm mt-1">{errors.contact}</p>
+          <p className="text-red-500 text-xs mt-1">{errors.contact}</p>
         )}
       </div>
 
