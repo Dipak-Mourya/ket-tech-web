@@ -118,7 +118,7 @@ Please provide me with a detailed quote.`;
   const hasSelection = selectedService && name.trim() !== "" && contact && contactType && !errors.contact;
 
   return (
-    <div className="bg-white/95 backdrop-blur-sm rounded-lg p-6 shadow-xl max-w-sm w-full">
+    <div className="bg-slate-50 backdrop-blur-sm rounded-lg p-6 shadow-xl max-w-sm w-full">
       <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">
         Get Instant Quote
       </h3>
@@ -134,7 +134,7 @@ Please provide me with a detailed quote.`;
           placeholder="Enter your name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full mt-2 text-black"
+          className="w-full mt-2 text-black bg-white"
         />
       </div>
 
@@ -146,10 +146,11 @@ Please provide me with a detailed quote.`;
         <Input
           id="contact"
           type="text"
+          size={10}
           placeholder="Enter your email or phone number"
           value={contact}
           onChange={handleContactChange}
-          className={`w-full mt-2 text-black ${errors.contact ? 'border-red-500' : ''}`}
+          className={`w-full mt-2 bg-white text-black ${errors.contact ? 'border-red-500' : ''}`}
         />
         {contactType && (
           <p className="text-green-600 text-xs mt-1">
