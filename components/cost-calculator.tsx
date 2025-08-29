@@ -32,7 +32,10 @@ const services: Service[] = [
 
 export function CostCalculator() {
   const [name, setName] = useState("");
+  const [contact, setContact] = useState("");
   const [selectedService, setSelectedService] = useState("");
+  const [contactType, setContactType] = useState<'email' | 'phone' | null>(null);
+  const [errors, setErrors] = useState<{contact?: string}>({});
 
   const getSelectedServicePrice = () => {
     const service = services.find((s) => s.id === selectedService);
@@ -43,15 +46,65 @@ export function CostCalculator() {
     setSelectedService("");
   };
 
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validatePhone = (phone: string) => {
+    const phoneRegex = /^[6-9]\d{9}$/;
+    return phoneRegex.test(phone);
+  };
+
+  const detectContactType = (value: string) => {
+    if (validateEmail(value)) return 'email';
+    if (validatePhone(value)) return 'phone';
+    return null;
+  };
+
+  const handleContactChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setContact(value);
+
+    if (!value) {
+      setContactType(null);
+      setErrors({ contact: undefined });
+      return;
+    }
+
+    const type = detectContactType(value);
+    setContactType(type);
+
+    if (type === 'email') {
+      setErrors({ contact: undefined });
+    } else if (type === 'phone') {
+      setErrors({ contact: undefined });
+    } else {
+      // Check if it could be a partial email or phone
+      const emailRegex = /^[^\s@]*@[^\s@]*$/;
+      const phoneRegex = /^[6-9]?\d{0,9}$/;
+      
+      if (emailRegex.test(value)) {
+        setErrors({ contact: "Please enter a complete email address" });
+      } else if (phoneRegex.test(value.replace(/\D/g, ''))) {
+        setErrors({ contact: "Please enter a complete 10-digit phone number" });
+      } else {
+        setErrors({ contact: "Please enter a valid email or phone number" });
+      }
+    }
+  };
+
   const handleWhatsApp = () => {
     const price = getSelectedServicePrice();
     const selectedServiceName =
       services.find((s) => s.id === selectedService)?.name || "";
 
+    const contactLabel = contactType === 'email' ? 'Email' : 'Phone';
     const message = `Hi! I'm ${name}. I'm interested in your interior design services.
 
 Selected Service: ${selectedServiceName}
 Estimated Cost: ₹${price.toLocaleString()}
+${contactLabel}: ${contact}
 
 Please provide me with a detailed quote.`;
 
@@ -62,7 +115,7 @@ Please provide me with a detailed quote.`;
   };
 
   const price = getSelectedServicePrice();
-  const hasSelection = selectedService && name.trim() !== "";
+  const hasSelection = selectedService && name.trim() !== "" && contact && contactType && !errors.contact;
 
   return (
     <div className="bg-white/95 backdrop-blur-sm rounded-lg p-6 shadow-xl max-w-sm w-full">
@@ -83,6 +136,29 @@ Please provide me with a detailed quote.`;
           onChange={(e) => setName(e.target.value)}
           className="w-full mt-2 text-black"
         />
+      </div>
+
+      {/* Email/Phone Input */}
+      <div className="mb-6">
+        <Label htmlFor="contact" className="font-sans text-accent">
+          Email or Phone Number *
+        </Label>
+        <Input
+          id="contact"
+          type="text"
+          placeholder="Enter your email or phone number"
+          value={contact}
+          onChange={handleContactChange}
+          className={`w-full mt-2 text-black ${errors.contact ? 'border-red-500' : ''}`}
+        />
+        {contactType && (
+          <p className="text-green-600 text-xs mt-1">
+            ✓ Valid {contactType === 'email' ? 'email' : 'phone number'} detected
+          </p>
+        )}
+        {errors.contact && (
+          <p className="text-red-500 text-sm mt-1">{errors.contact}</p>
+        )}
       </div>
 
       {/* Services Selection */}

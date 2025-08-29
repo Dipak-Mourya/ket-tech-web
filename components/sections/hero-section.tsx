@@ -32,39 +32,35 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-black/40" />
 
       <div className="relative z-10 text-white px-4 max-w-7xl mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center h-full">
+        <div className="grid grid-cols-1 gap-8 items-center h-full">
           {/* Left Side - Text Content */}
           <div className="text-center lg:text-left">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-serif">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 font-serif">
               Best Interior Designers in Kolkata
             </h1>
-            <p className="text-lg md:text-xl mb-8 leading-relaxed">
+            <p className="text-lg md:text-xl mb-2 leading-relaxed opacity-90">
               Experience the highest level of transparency in interior design,
               with complete peace of mind.
             </p>
            
 
-            {/* Mobile CTA Button */}
-            <div className="mt-8 lg:hidden">
+            {/* CTA Button */}
+            <div className="mt-8">
               <Button
                 onClick={() => setShowMobileCalculator(true)}
-                className="bg-foreground text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 md:text-lg text-sm"
+                className="bg-foreground text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 md:text-lg text-sm cursor-pointer"
               >
-                Book a Free Consultation
+               Book A Free Consultation 
               </Button>
             </div>
           </div>
 
-          {/* Right Side - Cost Calculator */}
-          <div className="hidden lg:flex justify-center lg:justify-end">
-            <CostCalculator />
-          </div>
         </div>
       </div>
 
-      {/* Mobile Calculator Modal */}
+      {/* Cost Calculator Modal */}
       {showMobileCalculator && (
-        <div className="fixed inset-0 z-50 lg:hidden">
+        <div className="fixed inset-0 z-50">
           {/* Backdrop */}
           <div
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
@@ -77,7 +73,7 @@ export function HeroSection() {
               {/* Close Button */}
               <button
                 onClick={() => setShowMobileCalculator(false)}
-                className="absolute -top-12 right-0 p-2 text-white hover:bg-white/20 rounded-full transition-colors"
+                className="absolute -top-12 right-0 p-2 text-white hover:bg-white/20 rounded-full transition-colors cursor-pointer"
                 aria-label="Close calculator"
               >
                 <X className="h-6 w-6" />
