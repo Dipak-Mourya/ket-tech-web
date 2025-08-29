@@ -18,7 +18,7 @@ export function HeroSection() {
         loop
         playsInline
         preload="metadata"
-        poster="/modern-interior-design-living-room-with-elegant-fu.png"
+        poster="/fallback/modern-interior-design-living-room-with-elegant-fu.png"
         draggable={false}
         onDragStart={(e) => e.preventDefault()}
         onContextMenu={(e) => e.preventDefault()}

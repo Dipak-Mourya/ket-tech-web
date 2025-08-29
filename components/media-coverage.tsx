@@ -3,12 +3,12 @@
 import { useEffect, useState } from "react"
 
 const mediaLogos = [
-  { name: "Times of India", logo: "/times-of-india-logo.png" },
-  { name: "Hindustan Times", logo: "/hindustan-times-logo.png" },
-  { name: "Economic Times", logo: "/economic-times-logo.png" },
-  { name: "Indian Express", logo: "/indian-express-logo.png" },
-  { name: "Deccan Herald", logo: "/deccan-herald-logo.png" },
-  { name: "Business Standard", logo: "/business-standard-logo.png" },
+  { name: "Times of India", logo: "/clients/deccan-herald-logo.png" },
+  { name: "Hindustan Times", logo: "/clients/deccan-herald-logo.png" },
+  { name: "Economic Times", logo: "clients/deccan-herald-logo.png" },
+  { name: "Indian Express", logo: "/clients/deccan-herald-logo.png" },
+  { name: "Deccan Herald", logo: "/clients/deccan-herald-logo.png" },
+  { name: "Business Standard", logo: "/clients/deccan-herald-logo.png" },
 ]
 
 export function MediaCoverage() {
@@ -39,9 +39,9 @@ export function MediaCoverage() {
               <div key={index} className="flex-shrink-0 w-1/4 px-4">
                 <div className="flex items-center justify-center h-20 bg-muted/30 rounded-lg">
                   <img
-                    src={media.logo || "/placeholder.svg"}
+                    src={media.logo || "/fallback/placeholder.svg"}
                     alt={media.name}
-                    className="max-h-12 max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity"
+                    className="max-h-12 max-w-full object-contain opacity-90 hover:opacity-100 transition-opacity cursor-pointer"
                   />
                 </div>
               </div>
