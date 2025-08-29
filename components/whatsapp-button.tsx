@@ -1,5 +1,6 @@
 "use client"
-import React from 'react';
+import React, { useState } from 'react';
+import { X } from 'lucide-react';
 
 const openWhatsApp = () => {
   const message = encodeURIComponent('Hello, I have a question regarding PAWAN.');
@@ -8,30 +9,38 @@ const openWhatsApp = () => {
 };
 
 const WhatsAppButton = () => {
-  return (
-    <button
-      onClick={openWhatsApp}
-      className="fixed z-[30] bottom-3 right-4 
-                 flex items-center justify-center 
-                 bg-neutral-800 text-white cursor-pointer 
-                 transition-all duration-300
-                 p-3 md:px-6 md:py-3 
-                 rounded-full md:rounded-4xl xl:rounded-4xl lg:rounded-4xl
-                 shadow-lg"
-    >
-      {/* WhatsApp Logo */}
-      <img
-        src="socials/whatsapp.png"
-        alt="WhatsApp Logo"
-        width="24"
-        height="24"
-      />
+  const [showText, setShowText] = useState(true);
 
-      {/* Text only on md and above */}
-      <span className="hidden md:inline-block ml-2 text-sm sm:text-base">
-        WhatsApp Us
-      </span>
-    </button>
+  return (
+    <div className="fixed z-[30] bottom-5 right-4 flex flex-col items-end">
+      {/* Chat us text with cross */}
+      {showText && (
+        <div className="flex items-center gap-2 mb-2 bg-white rounded-full px-3 py-1 shadow-md border border-gray-200">
+          <span className="text-sm font-medium text-gray-700">Chat us</span>
+          <button
+            onClick={() => setShowText(false)}
+            className="text-gray-500 hover:text-red-500 transition-colors"
+            aria-label="Hide chat text"
+          >
+            <X className="h-4 w-4 cursor-pointer" />
+          </button>
+        </div>
+      )}
+
+      {/* WhatsApp Icon Button */}
+      <button
+        onClick={openWhatsApp}
+        className="cursor-pointer"
+      >
+        {/* WhatsApp Logo */}
+        <img
+          src="socials/whatsapp.png"
+          alt="WhatsApp Logo"
+          width="40"
+          height="40"
+        />
+      </button>
+    </div>
   );
 };
 
