@@ -19,7 +19,7 @@ export function ProjectsContent() {
       {/* Hero Section */}
       <section className="relative h-96 flex items-center justify-center overflow-hidden mt-20">
         <img
-          src="/modern-interior-design-portfolio-showcase.png"
+          src="/projects/modern-living-room.png"
           alt="Our Projects"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -45,7 +45,7 @@ export function ProjectsContent() {
               <Card key={project.id} className="overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer">
                 <div className="relative overflow-hidden">
                   <img
-                    src={project.image || "/placeholder.svg"}
+                    src={project.image || "/fallback/placeholder.svg"}
                     alt={project.title}
                     className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                   />

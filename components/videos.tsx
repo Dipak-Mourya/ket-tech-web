@@ -25,7 +25,7 @@ export function Videos() {
             <Card key={video.id} className="overflow-hidden cursor-pointer hover:shadow-lg transition-shadow group">
               <div className="relative">
                 <img
-                  src={video.thumbnail || "/placeholder.svg?height=200&width=300"}
+                  src={video.thumbnail || "/fallback/placeholder.svg?height=200&width=300"}
                   alt={video.title}
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                 />

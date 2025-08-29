@@ -42,7 +42,7 @@ export function WhyChooseUs() {
           <div className="relative">
             <Card className="overflow-hidden">
               <img
-                src="/professional-interior-design-team-working-on-proje.png"
+                src="/projects/modern-living-room.png"
                 alt="Professional interior design team"
                 className="w-full h-96 object-cover"
               />

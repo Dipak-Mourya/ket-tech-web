@@ -25,7 +25,7 @@ export function LatestProjects() {
               <CardContent className="p-0">
                 <div className="relative group">
                   <img
-                    src={project.image || "/placeholder.svg"}
+                    src={project.image || "/fallback/placeholder.svg"}
                     alt={project.title}
                     className="w-full h-64 object-cover transition-transform group-hover:scale-110"
                   />

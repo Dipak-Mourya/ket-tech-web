@@ -52,7 +52,7 @@ export function LatestProjects() {
             >
               <div className="relative overflow-hidden">
                 <img
-                  src={project.image || "/placeholder.svg"}
+                  src={project.image || "/fallback/placeholder.svg"}
                   alt={project.title}
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -87,7 +87,7 @@ export function LatestProjects() {
               <X className="h-6 w-6" />
             </Button>
             <img
-              src={selectedImage || "/placeholder.svg"}
+              src={selectedImage || "/fallback/placeholder.svg"}
               alt="Project detail"
               className="max-w-full max-h-full object-contain"
             />
