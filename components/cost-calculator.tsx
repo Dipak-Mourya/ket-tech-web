@@ -108,7 +108,7 @@ ${contactLabel}: ${contact}
 
 Please provide me with a detailed quote.`;
 
-    const whatsappUrl = `https://wa.me/91891017161?text=${encodeURIComponent(
+    const whatsappUrl = `https://wa.me/918910171611?text=${encodeURIComponent(
       message
     )}`;
     window.open(whatsappUrl, "_blank");
