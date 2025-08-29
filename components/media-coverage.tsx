@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 const mediaLogos = [
   { name: "Times of India", logo: "/clients/deccan-herald-logo.png" },
   { name: "Hindustan Times", logo: "/clients/deccan-herald-logo.png" },
-  { name: "Economic Times", logo: "/clients/deccan-herald-logo.png" },
+  { name: "Economic Times", logo: "clients/deccan-herald-logo.png" },
   { name: "Indian Express", logo: "/clients/deccan-herald-logo.png" },
   { name: "Deccan Herald", logo: "/clients/deccan-herald-logo.png" },
   { name: "Business Standard", logo: "/clients/deccan-herald-logo.png" },
