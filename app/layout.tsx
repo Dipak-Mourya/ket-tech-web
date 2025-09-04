@@ -16,7 +16,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "KET Design - Best Interior Designers in Kolkata",
+  title: "KET Design - Your Space, Our Passion.",
   description:
     "Experience the highest level of transparency in interior design, with complete peace of mind. Professional interior design services in Kolkata.",
   icons: {
