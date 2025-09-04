@@ -218,19 +218,19 @@ export const faqData: FAQ[] = [
 export const statisticsData: Statistic[] = [
   {
     id: 1,
-    number: "500",
+    number: "457",
     label: "Projects Completed",
     suffix: "+",
   },
   {
     id: 2,
-    number: "15",
+    number: "8",
     label: "Years Experience",
     suffix: "+",
   },
   {
     id: 3,
-    number: "98",
+    number: "95",
     label: "Client Satisfaction",
     suffix: "%",
   },
@@ -301,20 +301,21 @@ export const clientReviewsData: ClientReview[] = [
 export const youtubeVideosData = [
   {
     id: 1,
-    title: "Client Testimonial - Modern Home Design",
-    embedId: "dQw4w9WgXcQ",
+    title: "Apartment Interior Design",
+    embedId: "xVrluLbMfq0",
   },
   {
     id: 2,
-    title: "Office Space Transformation Review",
-    embedId: "dQw4w9WgXcQ",
+    title: "Flat Interior Design at Airport Residency",
+    embedId: "ZgCC3swp2bA",
   },
   {
     id: 3,
-    title: "Restaurant Design Success Story",
-    embedId: "dQw4w9WgXcQ",
+    title: "Apartment Interior Design",
+    embedId: "vZAVxdOwljQ",
   },
-]
+];
+
 
 // Company information
 export const companyInfo = {

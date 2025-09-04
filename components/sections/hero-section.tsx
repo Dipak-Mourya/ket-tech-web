@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -18,7 +18,7 @@ export function HeroSection() {
         loop
         playsInline
         preload="metadata"
-        poster="/fallback/modern-interior-design-living-room-with-elegant-fu.png"
+        poster="/fallback/modern-interior-design-living-room.webp"
         draggable={false}
         onDragStart={(e) => e.preventDefault()}
         onContextMenu={(e) => e.preventDefault()}
@@ -38,11 +38,10 @@ export function HeroSection() {
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 font-serif">
               Best Interior Designers in Kolkata
             </h1>
-            <p className="text-lg md:text-xl mb-2 leading-relaxed opacity-90">
-              Experience the highest level of transparency in interior design,
-              with complete peace of mind.
+            <p className="text-lg md:text-xl mb-2 leading-relaxed opacity-90 max-w-[50rem]">
+              Experience unmatched transparency and peace of mind in interior
+              design with KET Design – Your Space, Our Passion.
             </p>
-           
 
             {/* CTA Button */}
             <div className="mt-8">
@@ -50,11 +49,10 @@ export function HeroSection() {
                 onClick={() => setShowMobileCalculator(true)}
                 className="bg-foreground text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 md:text-lg text-sm cursor-pointer"
               >
-               Book A Free Consultation 
+                Book A Free Consultation
               </Button>
             </div>
           </div>
-
         </div>
       </div>
 

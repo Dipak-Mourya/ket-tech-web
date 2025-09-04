@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 
 export function Header() {
@@ -51,15 +52,27 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-b border-border transition-all duration-300 ${
-        scrolled ? "bg-background/70" : "bg-background/95"
+      className={`bg-slate-50 fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-b border-border transition-all duration-300 ${
+        scrolled ? "bg-background/100" : "bg-background/100"
       }`}
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="font-sans font-bold text-2xl text-foreground">
-            KET Design
-          </div>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo/profile-logo.jpg"
+              alt="KET Design Logo"
+              width={120}
+              height={48}
+              priority
+              className="h-14 w-full"
+              style={{
+                mixBlendMode: 'darken',
+                backgroundColor: 'transparent'
+              }}
+              draggable={false}
+            />
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8 font-medium">

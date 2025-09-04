@@ -4,7 +4,7 @@ import { X } from 'lucide-react';
 
 const openWhatsApp = () => {
   const message = encodeURIComponent('Hello, I have a question regarding PAWAN.');
-  const phoneNumber = '+918069543300';
+  const phoneNumber = '+919051618504';
   window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
 };
 
