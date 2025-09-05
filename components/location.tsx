@@ -41,18 +41,18 @@ export function Location() {
                 Contact Information
               </h3>
               <div className="space-y-2 font-sans text-sm md:text-base text-muted-foreground">
-                <p className="flex items-center space-x-3 group">
-                  <div className="p-1.5 bg-accent/10 rounded-lg">
+                <div className="flex items-center space-x-3 group">
+                  <span className="p-1.5 bg-accent/10 rounded-lg">
                     <Phone className="h-4 w-4 text-accent" />
-                  </div>
+                  </span>
                   <span>Contact Number: 9051618504</span>
-                </p>
-                <p className="flex items-center space-x-3 group">
-                  <div className="p-1.5 bg-accent/10 rounded-lg">
+                </div>
+                <div className="flex items-center space-x-3 group">
+                  <span className="p-1.5 bg-accent/10 rounded-lg">
                     <Mail className="h-4 w-4 text-accent" />
-                  </div>
+                  </span>
                   <span>Email: ketdesignkolkata@gmail.com</span>
-                </p>
+                </div>
               </div>
             </div>
 
@@ -62,14 +62,14 @@ export function Location() {
                 Business Hours
               </h3>
               <div className="space-y-1 font-sans text-sm md:text-base text-muted-foreground">
-                <p className="flex justify-between items-center">
+                <div className="flex justify-between items-center">
                   <span>Monday to Saturday:</span> 
                   <span className="text-accent font-medium">9:30 AM – 7:30 PM</span>
-                </p>
-                <p className="flex justify-between items-center">
+                </div>
+                <div className="flex justify-between items-center">
                   <span>Sunday:</span> 
                   <span className="text-muted-foreground/80">Closed</span>
-                </p>
+                </div>
               </div>
             </div>
           </div>
