@@ -28,7 +28,11 @@ export default function Home() {
       <Location />
       <OurCustomer />
       <FAQ />
-      <ContactForm />
+      <ContactForm
+        sectionTitle="Get In Touch"
+        sectionDescription="Ready to transform your space? Contact us today for a consultation and let's bring your vision to life."
+        formTitle="Contact Form"
+      />
     </main>
   );
 }

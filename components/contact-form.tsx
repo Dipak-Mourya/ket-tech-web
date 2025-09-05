@@ -16,7 +16,17 @@ import {
 } from "@/components/ui/select";
 import { AppToast } from "@/lib/app-toast";
 
-export function ContactForm() {
+interface ContactFormProps {
+  sectionTitle?: string;
+  sectionDescription?: string;
+  formTitle: string;
+}
+
+export function ContactForm({
+  sectionTitle,
+  sectionDescription,
+  formTitle,
+}: ContactFormProps) {
   type FormData = {
     firstName: string;
     lastName: string;
@@ -141,18 +151,17 @@ export function ContactForm() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-serif font-bold text-3xl md:text-4xl text-foreground mb-4">
-            Get In Touch
+            {sectionTitle}
           </h2>
           <p className="font-sans text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ready to transform your space? Contact us today for a consultation
-            and let's bring your vision to life.
+            {sectionDescription}
           </p>
         </div>
         <div className="max-w-2xl mx-auto">
           <Card>
             <CardHeader>
               <CardTitle className="font-sans text-2xl text-center mt-4">
-                Contact Form
+                {formTitle}
               </CardTitle>
             </CardHeader>
             <CardContent>
