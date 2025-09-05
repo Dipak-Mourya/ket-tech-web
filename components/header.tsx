@@ -112,7 +112,7 @@ export function Header() {
               className="font-sans cursor-pointer px-4 py-2 bg-foreground text-white border-b-2 transition-colors rounded-lg flex items-center space-x-2"
             >
               <span>Book Appointment</span>
-              <Calendar   className="w-4 h-4 text-white animate-pulse" />
+              <Calendar   className="w-4 h-4 text-white " />
             </Button>
           </nav>
 
@@ -180,7 +180,7 @@ export function Header() {
                 className="font-sans cursor-pointer px-4 py-2  bg-foreground text-white border-b-2 transition-colors rounded-lg w-[11rem]"
               >
                 <span>Book Appointment</span>
-                <Calendar className="w-4 h-4 text-white animate-pulse" />
+                <Calendar className="w-4 h-4 text-white " />
               </Button>
             </div>
           </nav>

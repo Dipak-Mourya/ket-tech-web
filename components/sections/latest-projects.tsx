@@ -22,7 +22,7 @@ export function LatestProjects() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {displayProjects.map((project) => (
-            <Card key={project.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+            <Card key={project.id} className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
               <CardContent className="p-0">
                 <div className="relative group">
                   <Image
