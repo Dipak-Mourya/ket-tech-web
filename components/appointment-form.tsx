@@ -166,6 +166,10 @@ export function AppointmentForm({
     }));
     setErrors((prev) => ({ ...prev, [e.target.name]: undefined }));
   };
+  const handleClose = () => {
+    onClose();
+    resetForm();
+  };
 
   const resetForm = () => {
     setFormData({
@@ -197,8 +201,8 @@ export function AppointmentForm({
             <Button
               variant="ghost"
               size="icon"
-              className="absolute right-4 top-4"
-              onClick={onClose}
+              className="absolute right-4 top-4 cursor-pointer"
+              onClick={handleClose}
             >
               <X className="h-4 w-4" />
             </Button>
