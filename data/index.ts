@@ -1,48 +1,73 @@
+import { Home, Building, Ruler, Paintbrush } from "lucide-react";
+
 export interface Project {
-  id: number
-  title: string
-  image: string
-  category: string
+  id: number;
+  title: string;
+  image: string;
+  category: string;
 }
 
+import type { ReactNode } from "react";
+import React from "react";
+
 export interface Service {
-  id: number
-  title: string
-  description: string
-  icon: string
+  id: number;
+  title: string;
+  description: string;
+  icon: ReactNode;
 }
 
 export interface Testimonial {
-  id: number
-  name: string
-  role: string
-  company: string
-  content: string
-  rating: number
-  image: string
+  id: number;
+  name: string;
+  role: string;
+  company: string;
+  content: string;
+  rating: number;
+  image: string;
 }
 
 export interface FAQ {
-  id: number
-  question: string
-  answer: string
+  id: number;
+  question: string;
+  answer: string;
 }
 
 export interface Statistic {
-  id: number
-  number: string
-  label: string
-  suffix?: string
+  id: number;
+  number: string;
+  label: string;
+  suffix?: string;
 }
 
 export interface ClientReview {
-  id: number
-  name: string
-  project: string
-  rating: number
-  review: string
-  image: string
+  id: number;
+  name: string;
+  project: string;
+  rating: number;
+  review: string;
 }
+interface InfoSection {
+  title: string;
+  content: string;
+}
+
+//Info data
+export const infoSections: InfoSection[] = [
+  {
+    title: "Our Mission",
+    content: `At Ket Design, our mission is to create interiors that go beyond aesthetics—spaces that tell stories, reflect personalities, and enhance everyday living. Since 2015, we’ve been passionate about designing environments that balance beauty with functionality, tradition with modernity, and creativity with comfort. We aim to make exceptional design accessible, ensuring every home, office, or commercial space we create not only meets clients’ needs but also inspires them. Our mission is to transform ideas into timeless designs that bring joy, purpose, and value.`,
+  },
+  {
+    title: "Our Vision",
+    content: `Our vision is to create spaces that inspire, offer comfort, and reflect the unique identity of every individual or brand. We believe great design goes beyond aesthetics—it should elevate lifestyles, evoke emotion, and stand the test of time. We balance elegance, innovation, and functionality in every project, crafting interiors that exceed expectations—spaces that feel personal, purposeful, and enduring.`,
+  },
+  {
+    title: "Our Scope",
+    content: `Our scope goes beyond decorating interiors—we create spaces that inspire, function seamlessly, and endure. Serving residential, commercial, and corporate clients, each project is driven by creativity, precision, and deep client understanding. From tailored residential interiors to modern workspaces and retail environments, we deliver thoughtful, functional, and lasting spaces through smooth turnkey solutions from concept to completion.`,
+  },
+];
+
 
 // Projects data
 export const projectsData: Project[] = [
@@ -118,35 +143,39 @@ export const projectsData: Project[] = [
     image: "/projects/modern-living-room.png",
     category: "Commercial",
   },
-]
+];
 
 // Services data
 export const servicesData: Service[] = [
   {
     id: 1,
-    title: "Interior Design",
-    description: "Complete interior design solutions for residential and commercial spaces",
-    icon: "🏠",
+    title: "Residential Interior Design",
+    description:
+      "Elegant, functional homes designed to reflect your lifestyle with comfort and style.",
+    icon: React.createElement(Home, { className: "h-8 w-8 " }),
   },
   {
     id: 2,
-    title: "Architecture",
-    description: "Innovative architectural designs that blend functionality with aesthetics",
-    icon: "🏗️",
+    title: "Commercial Interior Design",
+    description:
+      "Modern, innovative spaces that enhance productivity and create lasting impressions.",
+    icon: React.createElement(Building, { className: "h-8 w-8" }),
   },
   {
     id: 3,
-    title: "Space Planning",
-    description: "Optimal space utilization and layout planning for maximum efficiency",
-    icon: "📐",
+    title: "3D Design & Visualization",
+    description:
+      "See your dream space come alive with realistic 3D concepts before execution.",
+    icon: React.createElement(Ruler, { className: "h-8 w-8 " }),
   },
   {
     id: 4,
-    title: "3D Visualization",
-    description: "Realistic 3D renders and virtual tours of your future space",
-    icon: "🎨",
+    title: "Renovation & Remodeling",
+    description:
+      "Transform your old interiors into fresh, timeless, and modern spaces.",
+    icon: React.createElement(Paintbrush, { className: "h-8 w-8 " }),
   },
-]
+];
 
 // Testimonials data
 export const testimonialsData: Testimonial[] = [
@@ -165,7 +194,8 @@ export const testimonialsData: Testimonial[] = [
     name: "Michael Chen",
     role: "Business Owner",
     company: "Tech Startup",
-    content: "The office design exceeded our expectations. It's both modern and conducive to productivity.",
+    content:
+      "The office design exceeded our expectations. It's both modern and conducive to productivity.",
     rating: 5,
     image: "/professional-man-portrait.png",
   },
@@ -174,11 +204,12 @@ export const testimonialsData: Testimonial[] = [
     name: "Emily Davis",
     role: "Restaurant Owner",
     company: "Fine Dining",
-    content: "Our restaurant's interior design has received countless compliments from customers. Excellent work!",
+    content:
+      "Our restaurant's interior design has received countless compliments from customers. Excellent work!",
     rating: 5,
     image: "/professional-woman-chef.png",
   },
-]
+];
 
 // FAQ data
 export const faqData: FAQ[] = [
@@ -186,51 +217,63 @@ export const faqData: FAQ[] = [
     id: 1,
     question: "What services does KET Design offer?",
     answer:
-      "We offer comprehensive interior design, architecture, space planning, and 3D visualization services for both residential and commercial projects.",
+      "We provide complete Architectural and Interior Design solutions for residential, commercial, and office spaces. Our services include space planning, 3D design, material selection, project execution support, and consultancy.",
   },
   {
     id: 2,
-    question: "How long does a typical project take?",
+    question: "Where is KET Design located?",
     answer:
-      "Project timelines vary depending on scope and complexity. Residential projects typically take 4-8 weeks, while commercial projects may take 8-16 weeks.",
+      "KET Design is headquartered in Kolkata, and we handle projects across different cities in India.",
   },
   {
     id: 3,
-    question: "Do you provide 3D visualizations?",
+    question: "How does KET Design charge for its services?",
     answer:
-      "Yes, we provide detailed 3D visualizations and virtual tours to help you visualize your space before implementation.",
+      "Unlike percentage-based fees, KET Design offers fixed design packages, ensuring cost transparency and flexibility. This allows clients to choose the package that best fits their budget.",
   },
   {
     id: 4,
-    question: "What is your design process?",
+    question: "Can I work with my own vendors and contractors?",
     answer:
-      "Our process includes consultation, concept development, design refinement, 3D visualization, and project implementation with regular client updates.",
+      "Yes, you are free to choose vendors you already know. We also provide quotations from multiple trusted vendors, and our team ensures smooth coordination and execution with the vendor of your choice.",
   },
   {
     id: 5,
-    question: "Do you handle project management?",
+    question: "Does KET Design provide on-site support?",
     answer:
-      "Yes, we provide end-to-end project management including coordination with contractors, vendors, and timeline management.",
+      "Absolutely. Our site representatives visit the project location as per requirements to ensure that the execution is progressing according to the approved design.",
   },
-]
+  {
+    id: 6,
+    question: "How experienced is the KET Design team?",
+    answer:
+      "Since our establishment in 2015, our team of qualified designers and experts has successfully handled numerous projects, delivering creative, practical, and high-quality designs tailored to each client’s lifestyle.",
+  },
+  {
+    id: 7,
+    question: "What are KET Design’s office hours?",
+    answer:
+      "We operate from Monday to Saturday, 9:30 a.m. to 7:30 p.m., ensuring our clients always receive personal attention and prompt communication.",
+  },
+];
 
 // Statistics data
 export const statisticsData: Statistic[] = [
   {
     id: 1,
-    number: "500",
+    number: "457",
     label: "Projects Completed",
     suffix: "+",
   },
   {
     id: 2,
-    number: "15",
+    number: "8",
     label: "Years Experience",
     suffix: "+",
   },
   {
     id: 3,
-    number: "98",
+    number: "95",
     label: "Client Satisfaction",
     suffix: "%",
   },
@@ -240,81 +283,87 @@ export const statisticsData: Statistic[] = [
     label: "Team Members",
     suffix: "+",
   },
-]
+];
 
 // Client reviews data for projects page
 export const clientReviewsData: ClientReview[] = [
   {
     id: 1,
-    name: "Rajesh Kumar",
-    project: "Luxury Villa Interior",
+    name: "Punam Das",
+    project: "Home Interior",
     rating: 5,
     review:
-      "KET Design exceeded our expectations with their innovative approach and attention to detail. Our villa looks absolutely stunning!",
-    image: "/indian-man-portrait.png",
+      "The designers transformed our house into a dream home. Every corner reflects our taste, yet feels more stylish than we imagined.",
   },
   {
     id: 2,
-    name: "Priya Sharma",
-    project: "Modern Apartment Design",
+    name: "Samir Bairagi",
+    project: "Full Home Interiors",
     rating: 5,
     review:
-      "Professional team with excellent communication. They understood our vision perfectly and delivered beyond our dreams.",
-    image: "/indian-woman-portrait.png",
+      "Very well experience... super happy with the interiors done by this company... totally worth it.",
   },
   {
     id: 3,
-    name: "Amit Patel",
-    project: "Office Space Renovation",
+    name: "Chiranjit Gure",
+    project: "Apartment Design",
     rating: 5,
     review:
-      "The office transformation has boosted our team's productivity. KET Design's space planning is exceptional.",
-    image: "/indian-businessman-portrait.png",
+      "Outstanding service and beautiful execution. Highly satisfied with their work.",
   },
   {
     id: 4,
-    name: "Sneha Gupta",
-    project: "Restaurant Interior",
+    name: "Jayanti Panda",
+    project: "Home Renovation",
     rating: 5,
-    review: "Our restaurant's ambiance has attracted more customers. The design perfectly captures our brand essence.",
-    image: "/indian-woman-business-owner-portrait.png",
+    review:
+      "Amazing team, flawless execution & on-time delivery.",
   },
   {
     id: 5,
-    name: "Vikram Singh",
-    project: "Penthouse Design",
+    name: "Pritish Sen",
+    project: "Custom Interiors",
     rating: 5,
-    review: "Luxury redefined! KET Design created a masterpiece that reflects our lifestyle perfectly.",
-    image: "/indian-man-executive-portrait.png",
+    review:
+      "Very nice work 👌👌👷👷",
   },
   {
     id: 6,
-    name: "Kavya Reddy",
-    project: "Boutique Store Design",
+    name: "Anushree Das",
+    project: "Modular Kitchen & Wardrobe",
     rating: 5,
-    review: "The store design has significantly improved our sales. Customers love the aesthetic and functionality.",
-    image: "/indian-woman-entrepreneur-portrait.png",
+    review:
+      "Loved the quality and finish. They really care about the details.",
   },
-]
+  {
+    id: 7,
+    name: "Akash Seal",
+    project: "Complete Home Interior",
+    rating: 5,
+    review:
+      "Professional and creative! Highly recommend for full house interiors.",
+  },
+];
+
 
 // YouTube videos data
 export const youtubeVideosData = [
   {
     id: 1,
-    title: "Client Testimonial - Modern Home Design",
-    embedId: "dQw4w9WgXcQ",
+    title: "Apartment Interior Design",
+    embedId: "xVrluLbMfq0",
   },
   {
     id: 2,
-    title: "Office Space Transformation Review",
-    embedId: "dQw4w9WgXcQ",
+    title: "Flat Interior Design at Airport Residency",
+    embedId: "ZgCC3swp2bA",
   },
   {
     id: 3,
-    title: "Restaurant Design Success Story",
-    embedId: "dQw4w9WgXcQ",
+    title: "Apartment Interior Design",
+    embedId: "vZAVxdOwljQ",
   },
-]
+];
 
 // Company information
 export const companyInfo = {
@@ -332,4 +381,22 @@ export const companyInfo = {
     linkedin: "https://linkedin.com/company/ketdesign",
     youtube: "https://youtube.com/ketdesign",
   },
-}
+};
+
+  export const services = [
+    "Residential Interior Design",
+    "Commercial & Office Spaces",
+    "Modular Kitchens & Wardrobes",
+    "3D Design & Visualization",
+    "Turnkey Project Solutions",
+    "Space Planning & Consultation",
+  ];
+
+export  const futureGoals = [
+    "Expand across major Indian cities",
+    "Integrate smart & sustainable designs",
+    "Enhance turnkey project solutions",
+    "Innovate with VR & advanced 3D technology",
+    "Create landmark signature projects",
+    "Strengthen long-term client relationships",
+  ];

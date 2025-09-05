@@ -2,13 +2,17 @@
 
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Calendar, CalendarArrowDown, Clock, Menu, X } from "lucide-react";
+import { Star } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
+import { AppointmentForm } from "@/components/appointment-form";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showAppointmentModal, setShowAppointmentModal] = useState(false);
 
   // Change header opacity on scroll
   React.useEffect(() => {
@@ -22,22 +26,8 @@ export function Header() {
   const pathname = usePathname();
 
   const handleContactClick = () => {
-    if (pathname === "/") {
-      // If on home page, just scroll to contact section
-      const element = document.getElementById("contact");
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    } else {
-      // If on other pages, navigate to home page and then scroll to contact
-      router.push("/");
-      setTimeout(() => {
-        const element = document.getElementById("contact");
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-        }
-      }, 100);
-    }
+    // Always show the modal instead of scrolling/navigating
+    setShowAppointmentModal(true);
     setIsMenuOpen(false);
   };
 
@@ -51,15 +41,27 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-b border-border transition-all duration-300 ${
-        scrolled ? "bg-background/70" : "bg-background/95"
+      className={`bg-slate-50 fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-b border-border transition-all duration-300 ${
+        scrolled ? "bg-background/100" : "bg-background/100"
       }`}
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="font-sans font-bold text-2xl text-foreground">
-            KET Design
-          </div>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo/profile-logo.jpg"
+              alt="KET Design Logo"
+              width={120}
+              height={48}
+              priority
+              className="h-12 w-full"
+              style={{
+                mixBlendMode: "darken",
+                backgroundColor: "transparent",
+              }}
+              draggable={false}
+            />
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8 font-medium">
@@ -95,9 +97,10 @@ export function Header() {
             </Link>
             <Button
               onClick={handleContactClick}
-              className="font-sans cursor-pointer px-4 py-2  bg-foreground text-white border-b-2 transition-colors rounded-lg "
+              className="font-sans cursor-pointer px-4 py-2 bg-foreground text-white border-b-2 transition-colors rounded-lg flex items-center space-x-2"
             >
-              Appointment
+              <span>Book Appointment</span>
+              <Calendar className="w-4 h-4 text-white " />
             </Button>
           </nav>
 
@@ -109,9 +112,15 @@ export function Header() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
-              <X className="h-10 w-10 stroke-[2] rounded-lg bg-neutral-800 p-0 text-accent-foreground font-extrabold cursor-pointer" size={24}/>
+              <X
+                className="h-10 w-10 stroke-[2] rounded-lg bg-neutral-800 p-0 text-accent-foreground font-extrabold cursor-pointer"
+                size={24}
+              />
             ) : (
-              <Menu className="h-20 w-20 stroke-[2] rounded-lg bg-neutral-800 p-0 text-accent-foreground font-extrabold cursor-pointer" size={24}/>
+              <Menu
+                className="h-20 w-20 stroke-[2] rounded-lg bg-neutral-800 p-0 text-accent-foreground font-extrabold cursor-pointer"
+                size={24}
+              />
             )}
           </Button>
         </div>
@@ -156,14 +165,20 @@ export function Header() {
 
               <Button
                 onClick={handleContactClick}
-                className="font-sans cursor-pointer px-4 py-2  bg-foreground text-white border-b-2 transition-colors rounded-lg w-[7rem]"
+                className="font-sans cursor-pointer px-4 py-2  bg-foreground text-white border-b-2 transition-colors rounded-lg w-[11rem]"
               >
-                Appointment
+                <span>Book Appointment</span>
+                <Calendar className="w-4 h-4 text-white " />
               </Button>
             </div>
           </nav>
         )}
       </div>
+      <AppointmentForm
+        isOpen={showAppointmentModal}
+        onClose={() => setShowAppointmentModal(false)}
+        buttonText="Book Your Appointment"
+      />
     </header>
   );
 }

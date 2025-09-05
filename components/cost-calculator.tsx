@@ -20,14 +20,13 @@ interface Service {
 }
 
 const services: Service[] = [
-  { id: "design-thinking", name: "Design Thinking", price: 30000 },
-  { id: "interior-design", name: "Interior Design", price: 50000 },
-  { id: "3d-design", name: "3D Design", price: 25000 },
-  { id: "corporate-design", name: "Corporate Design", price: 75000 },
-  { id: "residential-design", name: "Residential Design", price: 60000 },
-  { id: "commercial-design", name: "Commercial Design", price: 80000 },
-  { id: "kitchen-design", name: "Kitchen Design", price: 35000 },
-  { id: "bathroom-design", name: "Bathroom Design", price: 25000 },
+  { id: "residential-interiors", name: "Residential Interiors", price: 60000 },
+  { id: "office-workspace-design", name: "Office & Workspace Design", price: 75000 },
+  { id: "retail-commercial-interiors", name: "Retail & Commercial Interiors", price: 80000 },
+  { id: "modular-kitchens-wardrobes", name: "Modular Kitchens & Wardrobes", price: 50000 },
+  { id: "3d-design-visualization", name: "3D Design & Visualization", price: 40000 },
+  { id: "turnkey-projects", name: "Turnkey Projects", price: 100000 },
+  { id: "renovation-remodeling", name: "Renovation & Remodeling", price: 70000 },
 ];
 
 export function CostCalculator() {
@@ -108,7 +107,7 @@ ${contactLabel}: ${contact}
 
 Please provide me with a detailed quote.`;
 
-    const whatsappUrl = `https://wa.me/918910171611?text=${encodeURIComponent(
+    const whatsappUrl = `https://wa.me/919051618504?text=${encodeURIComponent(
       message
     )}`;
     window.open(whatsappUrl, "_blank");

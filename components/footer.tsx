@@ -1,76 +1,111 @@
+import Image from "next/image";
+import { Phone, Mail } from "lucide-react";
+
 export function Footer() {
   return (
     <footer className="bg-neutral-800 text-background py-16">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12 items-center justify-center text-center md:text-left">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-12 items-start justify-center text-center md:text-left">
           {/* Company Info */}
           <div className="space-y-4 flex flex-col items-center text-center md:items-start md:text-left">
-            <h3 className="font-sans font-bold text-2xl">KET Design</h3>
+            <h3 className="font-sans font-bold text-2xl">
+              {" "}
+              <Image
+                src="/logo/profile-logo.jpg"
+                alt="KET Design Logo"
+                width={120}
+                height={48}
+                priority
+                className="h-12 w-full"
+                style={{
+                  mixBlendMode: "hard-light",
+                  backgroundColor: "transparent",
+                }}
+                draggable={false}
+              />
+            </h3>
             <p className="font-sans text-sm leading-relaxed opacity-90">
-              Best Interior Designers in Kolkata. Experience the highest level
-              of transparency in interior design.
+              KET Design – Your Space, Our Passion.
             </p>
             <div className="flex space-x-4 justify-center md:justify-start">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/ketdesignkolkata/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
+                <Image
                   src="/socials/instagram.png"
                   alt="Instagram"
+                  width={24}
+                  height={24}
                   className="h-6 w-6 opacity-90 hover:opacity-100 cursor-pointer transition-opacity"
+                  draggable={false}
                 />
               </a>
               <a
-                href="https://youtube.com"
+                href="https://www.youtube.com/@ketdesignkolkata"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
+                <Image
                   src="/socials/youtube.png"
                   alt="YouTube"
+                  width={24}
+                  height={24}
                   className="h-6 w-6 opacity-90 hover:opacity-100 cursor-pointer transition-opacity"
+                  draggable={false}
                 />
               </a>
               <a href="https://x.com" target="_blank" rel="noopener noreferrer">
-                <img
+                <Image
                   src="/socials/x.png"
                   alt="Twitter/X"
+                  width={24}
+                  height={24}
                   className="h-6 w-6 opacity-90 hover:opacity-100 cursor-pointer transition-opacity"
+                  draggable={false}
                 />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/ket-design-45274029b/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
+                <Image
                   src="/socials/linkedin.png"
                   alt="LinkedIn"
+                  width={24}
+                  height={24}
                   className="h-6 w-6 opacity-90 hover:opacity-100 cursor-pointer transition-opacity"
+                  draggable={false}
                 />
               </a>
               <a
-                href="https://pinterest.com"
+                href="https://pin.it/4MoYLGMxV"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
+                <Image
                   src="/socials/pinterest.png"
                   alt="Pinterest"
+                  width={24}
+                  height={24}
                   className="h-6 w-6 opacity-90 hover:opacity-100 cursor-pointer transition-opacity"
+                  draggable={false}
                 />
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=100063962445536"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
+                <Image
                   src="/socials/facebook.png"
                   alt="Facebook"
+                  width={24}
+                  height={24}
                   className="h-6 w-6 opacity-90 hover:opacity-100 cursor-pointer transition-opacity"
+                  draggable={false}
                 />
               </a>
             </div>
@@ -81,21 +116,26 @@ export function Footer() {
             <h4 className="font-sans font-semibold text-lg">Contact</h4>
             <div className="space-y-2 font-sans text-sm opacity-90">
               <p className="w-full flex justify-center md:justify-start">
-                <a href="tel:02071177198" className="flex items-center space-x-2 hover:opacity-100 transition-opacity">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 inline-block opacity-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92V19a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 3 5.18 2 2 0 0 1 5 3h2.09a2 2 0 0 1 2 1.72c.13 1.13.37 2.24.72 3.31a2 2 0 0 1-.45 2.11l-.27.27a16 16 0 0 0 6.29 6.29l.27-.27a2 2 0 0 1 2.11-.45c1.07.35 2.18.59 3.31.72a2 2 0 0 1 1.72 2z"></path></svg>
-                  <span>020-71177198</span>
+                <a
+                  href="tel:9051618504"
+                  className="flex items-center space-x-2 hover:opacity-100 transition-opacity"
+                >
+                  <Phone className="h-4 w-4 inline-block opacity-90" />
+                  <span>+91 9051618504</span>
                 </a>
               </p>
               <p>
-                <a href="mailto:inquiry@kamsdesigner.com" className="flex items-center space-x-2 hover:opacity-100 transition-opacity">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 inline-block opacity-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" /><polyline points="22,6 12,13 2,6" /></svg>
+                <a
+                  href="mailto:inquiry@kamsdesigner.com"
+                  className="flex items-center space-x-2 hover:opacity-100 transition-opacity justify-center md:justify-start"
+                >
+                  <Mail className="h-4 w-4 inline-block opacity-90" />
                   <span>inquiry@kamsdesigner.com</span>
                 </a>
               </p>
               <div className="pt-2">
-                <p className="font-semibold">Business Hours:</p>
-                <p>Mon–Sat: 9:30 AM – 7:00 PM</p>
-                <p>Sun: Closed</p>
+                <p className="font-semibold mb-4">Address:</p>
+                <p>45/4, Beleghata Main Road, Kolkata - 700010, West Bengal, India</p>
               </div>
             </div>
           </div>
@@ -105,31 +145,44 @@ export function Footer() {
             <h4 className="font-sans font-semibold text-lg">Services</h4>
             <div className="space-y-2 font-sans text-sm opacity-90">
               <p className="hover:opacity-100 cursor-auto transition-opacity">
-                Living Room Design
+                Residential Interiors
               </p>
               <p className="hover:opacity-100 cursor-auto transition-opacity">
-                Bedroom Design
+                Office & Workspace Design
               </p>
               <p className="hover:opacity-100 cursor-auto transition-opacity">
-                Kitchen Design
+                Retail & Commercial Interiors
               </p>
               <p className="hover:opacity-100 cursor-auto transition-opacity">
-                Wardrobe Design
+                Modular Kitchens & Wardrobes
               </p>
               <p className="hover:opacity-100 cursor-auto transition-opacity">
-                Pooja Room Design
+                3D Design & Visualization
+              </p>
+              <p className="hover:opacity-100 cursor-auto transition-opacity">
+                Turnkey Projects
               </p>
             </div>
           </div>
 
           {/* Address & Other Brands */}
           <div className="space-y-4 flex flex-col items-center text-center md:items-start md:text-left">
-            <h4 className="font-sans font-semibold text-lg">Address</h4>
+            <h4 className="font-sans font-semibold text-lg">Business Hours</h4>
             <p className="font-sans text-sm opacity-90 leading-relaxed">
-              Shop No. 6, ARUN PARK, S.No.33/3, near Aditya Birla Hospital Marg,
-              Datta Nagar, Thergaon, PUNE, Maharashtra 411033
+              Monday: 9:30 AM – 7:30 PM
+              <br />
+              Tuesday: 9:30 AM – 7:30 PM
+              <br />
+              Wednesday: 9:30 AM – 7:30 PM
+              <br />
+              Thursday: 9:30 AM – 7:30 PM
+              <br />
+              Friday: 9:30 AM – 7:30 PM
+              <br />
+              Saturday: 9:30 AM – 7:30 PM
+              <br />
+              Sunday: Closed
             </p>
-           
           </div>
         </div>
 
@@ -141,7 +194,7 @@ export function Footer() {
           </p>
           <div className="flex space-x-6 font-sans text-sm opacity-90">
             <span className="hover:opacity-100 cursor-auto transition-opacity">
-              Designed & Crafted By ZapCode
+              Designed & Crafted By <strong>ZapCode Labs</strong>
             </span>
           </div>
         </div>

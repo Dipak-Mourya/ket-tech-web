@@ -41,7 +41,7 @@ export function Statistics() {
                   />
                 )}
               </div>
-              <p className="font-serif text-lg text-muted-foreground">{stat.label}</p>
+              <p className="font-serif text-sm md:text-base lg:text-lg text-muted-foreground">{stat.label}</p>
             </div>
           ))}
         </div>

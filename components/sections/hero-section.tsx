@@ -1,9 +1,10 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { CostCalculator } from "@/components/cost-calculator";
 import { X } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 export function HeroSection() {
   const [showMobileCalculator, setShowMobileCalculator] = useState(false);
@@ -18,7 +19,7 @@ export function HeroSection() {
         loop
         playsInline
         preload="metadata"
-        poster="/fallback/modern-interior-design-living-room-with-elegant-fu.png"
+        poster="/fallback/modern-interior-design-living-room.webp"
         draggable={false}
         onDragStart={(e) => e.preventDefault()}
         onContextMenu={(e) => e.preventDefault()}
@@ -35,14 +36,16 @@ export function HeroSection() {
         <div className="grid grid-cols-1 gap-8 items-center h-full">
           {/* Left Side - Text Content */}
           <div className="text-center lg:text-left">
+            <Badge className="mb-6 bg-white/20 text-white border-white/30 hover:bg-white/30">
+              Established 2015
+            </Badge>
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 font-serif">
               Best Interior Designers in Kolkata
             </h1>
-            <p className="text-lg md:text-xl mb-2 leading-relaxed opacity-90">
-              Experience the highest level of transparency in interior design,
-              with complete peace of mind.
+            <p className="text-sm md:text-lg lg:text-xl mb-2 leading-relaxed opacity-90 max-w-[50rem]">
+              Experience unmatched transparency and peace of mind in interior
+              design with KET Design – Your Space, Our Passion.
             </p>
-           
 
             {/* CTA Button */}
             <div className="mt-8">
@@ -50,11 +53,10 @@ export function HeroSection() {
                 onClick={() => setShowMobileCalculator(true)}
                 className="bg-foreground text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 md:text-lg text-sm cursor-pointer"
               >
-               Book A Free Consultation 
+                Book A Free Consultation
               </Button>
             </div>
           </div>
-
         </div>
       </div>
 

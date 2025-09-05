@@ -16,7 +16,17 @@ import {
 } from "@/components/ui/select";
 import { AppToast } from "@/lib/app-toast";
 
-export function ContactForm() {
+interface ContactFormProps {
+  sectionTitle?: string;
+  sectionDescription?: string;
+  formTitle: string;
+}
+
+export function ContactForm({
+  sectionTitle,
+  sectionDescription,
+  formTitle,
+}: ContactFormProps) {
   type FormData = {
     firstName: string;
     lastName: string;
@@ -141,18 +151,17 @@ export function ContactForm() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-serif font-bold text-3xl md:text-4xl text-foreground mb-4">
-            Get In Touch
+            {sectionTitle}
           </h2>
-          <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ready to transform your space? Contact us today for a consultation
-            and let's bring your vision to life.
+          <p className="font-sans text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
+            {sectionDescription}
           </p>
         </div>
         <div className="max-w-2xl mx-auto">
           <Card>
             <CardHeader>
-              <CardTitle className="font-sans text-2xl text-center">
-                Contact Form
+              <CardTitle className="font-sans text-2xl text-center mt-4">
+                {formTitle}
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -264,13 +273,28 @@ export function ContactForm() {
                       <SelectValue placeholder="Select a service" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="Design Thinking">
-                        Design Thinking
+                      <SelectItem value="Residential Interiors">
+                        Residential Interiors
                       </SelectItem>
-                      <SelectItem value="Interior Design">
-                        Interior Design
+                      <SelectItem value="Office & Workspace Design">
+                        Office & Workspace Design
                       </SelectItem>
-                      <SelectItem value="3D Design">3D Design</SelectItem>
+                      <SelectItem value="Retail & Commercial Interiors">
+                        Retail & Commercial Interiors
+                      </SelectItem>
+                      <SelectItem value="Modular Kitchens & Wardrobes">
+                        Modular Kitchens & Wardrobes
+                      </SelectItem>
+                      <SelectItem value="3D Design & Visualization">
+                        3D Design & Visualization
+                      </SelectItem>
+                      <SelectItem value="Turnkey Projects">
+                        Turnkey Projects
+                      </SelectItem>
+                      <SelectItem value="Renovation & Remodeling">
+                        Renovation & Remodeling
+                      </SelectItem>
+                      <SelectItem value="Others">Others</SelectItem>
                     </SelectContent>
                   </Select>
                   {errors.services && (
@@ -286,6 +310,7 @@ export function ContactForm() {
                   <Textarea
                     id="message"
                     name="message"
+                    placeholder="Type your message..."
                     value={formData.message}
                     onChange={handleChange}
                     rows={5}
@@ -297,7 +322,7 @@ export function ContactForm() {
                     </div>
                   )}
                 </div>
-                <div className="flex flex-row md:justify-start md:items-center gap-4 mt-6">
+                <div className="flex flex-row md:justify-start md:items-center gap-4 my-4">
                   <Button
                     type="submit"
                     size="sm"
