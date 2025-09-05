@@ -44,7 +44,7 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Banner */}
-      <section className="relative h-96 flex items-center justify-center overflow-hidden mt-20">
+      <section className="relative h-86 flex items-center justify-center overflow-hidden mt-20">
         <Image
           src="/about/about-banner.webp"
           alt="About KET Design"
