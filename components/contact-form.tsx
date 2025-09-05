@@ -143,7 +143,7 @@ export function ContactForm() {
           <h2 className="font-serif font-bold text-3xl md:text-4xl text-foreground mb-4">
             Get In Touch
           </h2>
-          <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="font-sans text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
             Ready to transform your space? Contact us today for a consultation
             and let's bring your vision to life.
           </p>
@@ -264,13 +264,28 @@ export function ContactForm() {
                       <SelectValue placeholder="Select a service" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="Design Thinking">
-                        Design Thinking
+                      <SelectItem value="Residential Interiors">
+                        Residential Interiors
                       </SelectItem>
-                      <SelectItem value="Interior Design">
-                        Interior Design
+                      <SelectItem value="Office & Workspace Design">
+                        Office & Workspace Design
                       </SelectItem>
-                      <SelectItem value="3D Design">3D Design</SelectItem>
+                      <SelectItem value="Retail & Commercial Interiors">
+                        Retail & Commercial Interiors
+                      </SelectItem>
+                      <SelectItem value="Modular Kitchens & Wardrobes">
+                        Modular Kitchens & Wardrobes
+                      </SelectItem>
+                      <SelectItem value="3D Design & Visualization">
+                        3D Design & Visualization
+                      </SelectItem>
+                      <SelectItem value="Turnkey Projects">
+                        Turnkey Projects
+                      </SelectItem>
+                      <SelectItem value="Renovation & Remodeling">
+                        Renovation & Remodeling
+                      </SelectItem>
+                      <SelectItem value="Others">Others</SelectItem>
                     </SelectContent>
                   </Select>
                   {errors.services && (

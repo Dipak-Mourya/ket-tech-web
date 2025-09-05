@@ -7,7 +7,7 @@ export function DesignServices() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">Our Design Services</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
             We offer comprehensive design solutions tailored to your unique needs and vision
           </p>
         </div>
@@ -18,7 +18,7 @@ export function DesignServices() {
               <CardContent className="p-6">
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold mb-3 font-serif">{service.title}</h3>
-                <p className="text-muted-foreground">{service.description}</p>
+                <p className="text-sm md:text-base text-muted-foreground">{service.description}</p>
               </CardContent>
             </Card>
           ))}

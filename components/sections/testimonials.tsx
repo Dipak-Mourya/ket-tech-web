@@ -6,7 +6,7 @@ export function Testimonials() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-serif font-bold text-3xl md:text-4xl text-foreground mb-4">Hear From Our Clients</h2>
-          <p className="font-serif text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="font-serif text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
             Watch what our satisfied clients have to say about their experience with KET Design.
           </p>
         </div>

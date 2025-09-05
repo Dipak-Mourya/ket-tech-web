@@ -28,12 +28,12 @@ export default function AboutPage() {
             <h2 className="font-serif font-bold text-3xl md:text-4xl text-foreground mb-8 text-center">Our Story</h2>
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <p className="font-serif text-lg text-muted-foreground mb-6 leading-relaxed">
+                <p className="font-serif text-sm md:text-base lg:text-lg text-muted-foreground mb-6 leading-relaxed">
                   Founded over 18 years ago, {companyInfo.name} has grown from a small design studio to Kolkata's most
                   trusted interior design firm. Our journey began with a simple vision: to create beautiful, functional
                   spaces that reflect our clients' personalities and lifestyles.
                 </p>
-                <p className="font-serif text-lg text-muted-foreground leading-relaxed">
+                <p className="font-serif text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed">
                   Today, we have completed over 500 projects, earning a 98% client satisfaction rate from our satisfied
                   clients. Our commitment to transparency, quality, and innovation has made us the preferred choice for
                   discerning homeowners and businesses across Kolkata.
@@ -53,21 +53,21 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="p-8 text-center">
               <h3 className="font-sans font-bold text-2xl text-foreground mb-4">Our Mission</h3>
-              <p className="font-serif text-muted-foreground leading-relaxed">
+              <p className="font-serif text-sm md:text-base text-muted-foreground leading-relaxed">
                 To transform spaces into beautiful, functional environments that enhance the quality of life for our
                 clients through innovative design and exceptional service.
               </p>
             </Card>
             <Card className="p-8 text-center">
               <h3 className="font-sans font-bold text-2xl text-foreground mb-4">Our Vision</h3>
-              <p className="font-serif text-muted-foreground leading-relaxed">
+              <p className="font-serif text-sm md:text-base text-muted-foreground leading-relaxed">
                 To be recognized as the leading interior design firm in Eastern India, setting new standards for
                 creativity, quality, and client satisfaction.
               </p>
             </Card>
             <Card className="p-8 text-center">
               <h3 className="font-sans font-bold text-2xl text-foreground mb-4">Our Scope</h3>
-              <p className="font-serif text-muted-foreground leading-relaxed">
+              <p className="font-serif text-sm md:text-base text-muted-foreground leading-relaxed">
                 We specialize in residential and commercial interior design, offering complete design services from
                 concept to execution across Kolkata and surrounding areas.
               </p>
@@ -86,7 +86,7 @@ export default function AboutPage() {
             <div className="grid md:grid-cols-2 gap-12">
               <div>
                 <h3 className="font-sans font-bold text-2xl text-foreground mb-6">Our Services</h3>
-                <ul className="space-y-3 font-serif text-muted-foreground">
+                <ul className="space-y-3 text-sm md:text-base font-serif text-muted-foreground">
                   <li>• Complete Interior Design & Planning</li>
                   <li>• 3D Visualization & Rendering</li>
                   <li>• Space Planning & Layout Design</li>
@@ -99,7 +99,7 @@ export default function AboutPage() {
               </div>
               <div>
                 <h3 className="font-sans font-bold text-2xl text-foreground mb-6">Key Achievements</h3>
-                <ul className="space-y-3 font-serif text-muted-foreground">
+                <ul className="space-y-3 text-sm md:text-base font-serif text-muted-foreground">
                   <li>• 15+ Years of Excellence in Interior Design</li>
                   <li>• 500+ Successfully Completed Projects</li>
                   <li>• 98% Client Satisfaction Rate</li>
@@ -120,12 +120,12 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-serif font-bold text-3xl md:text-4xl text-foreground mb-8">Future Goals</h2>
-            <p className="font-serif text-lg text-muted-foreground mb-8 leading-relaxed">
+            <p className="font-serif text-sm md:text-base lg:text-lg text-muted-foreground mb-8 leading-relaxed">
               As we look ahead, {companyInfo.name} is committed to expanding our reach while maintaining the highest
               standards of quality and service. Our future goals include embracing sustainable design practices,
               incorporating smart home technologies, and continuing to innovate in the interior design space.
             </p>
-            <p className="font-serif text-lg text-muted-foreground mb-12 leading-relaxed">
+            <p className="font-serif text-sm md:text-base lg:text-lg text-muted-foreground mb-12 leading-relaxed">
               We aim to establish {companyInfo.name} as a household name across Eastern India, while never losing sight
               of our core values: transparency, quality, and client satisfaction.
             </p>

@@ -186,33 +186,46 @@ export const faqData: FAQ[] = [
     id: 1,
     question: "What services does KET Design offer?",
     answer:
-      "We offer comprehensive interior design, architecture, space planning, and 3D visualization services for both residential and commercial projects.",
+      "We provide complete Architectural and Interior Design solutions for residential, commercial, and office spaces. Our services include space planning, 3D design, material selection, project execution support, and consultancy.",
   },
   {
     id: 2,
-    question: "How long does a typical project take?",
+    question: "Where is KET Design located?",
     answer:
-      "Project timelines vary depending on scope and complexity. Residential projects typically take 4-8 weeks, while commercial projects may take 8-16 weeks.",
+      "KET Design is headquartered in Kolkata, and we handle projects across different cities in India.",
   },
   {
     id: 3,
-    question: "Do you provide 3D visualizations?",
+    question: "How does KET Design charge for its services?",
     answer:
-      "Yes, we provide detailed 3D visualizations and virtual tours to help you visualize your space before implementation.",
+      "Unlike percentage-based fees, KET Design offers fixed design packages, ensuring cost transparency and flexibility. This allows clients to choose the package that best fits their budget.",
   },
   {
     id: 4,
-    question: "What is your design process?",
+    question: "Can I work with my own vendors and contractors?",
     answer:
-      "Our process includes consultation, concept development, design refinement, 3D visualization, and project implementation with regular client updates.",
+      "Yes, you are free to choose vendors you already know. We also provide quotations from multiple trusted vendors, and our team ensures smooth coordination and execution with the vendor of your choice.",
   },
   {
     id: 5,
-    question: "Do you handle project management?",
+    question: "Does KET Design provide on-site support?",
     answer:
-      "Yes, we provide end-to-end project management including coordination with contractors, vendors, and timeline management.",
+      "Absolutely. Our site representatives visit the project location as per requirements to ensure that the execution is progressing according to the approved design.",
   },
-]
+  {
+    id: 6,
+    question: "How experienced is the KET Design team?",
+    answer:
+      "Since our establishment in 2015, our team of qualified designers and experts has successfully handled numerous projects, delivering creative, practical, and high-quality designs tailored to each client’s lifestyle.",
+  },
+  {
+    id: 7,
+    question: "What are KET Design’s office hours?",
+    answer:
+      "We operate from Monday to Saturday, 9:30 a.m. to 7:30 p.m., ensuring our clients always receive personal attention and prompt communication.",
+  },
+];
+
 
 // Statistics data
 export const statisticsData: Statistic[] = [

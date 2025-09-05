@@ -29,7 +29,7 @@ export function Location() {
               <h3 className="font-sans font-semibold text-xl text-foreground mb-3">
                 Visit Our Office
               </h3>
-              <p className="font-sans text-muted-foreground leading-relaxed">
+              <p className="font-sans text-sm md:text-base text-muted-foreground leading-relaxed">
                 45/4, Beleghata Main Road, Kolkata - 700010, West Bengal, India
               </p>
             </div>
@@ -38,7 +38,7 @@ export function Location() {
               <h3 className="font-sans font-semibold text-xl text-foreground mb-3">
                 Contact Information
               </h3>
-              <div className="space-y-2 font-sans text-muted-foreground">
+              <div className="space-y-2 font-sans text-sm md:text-base text-muted-foreground">
                 <p className="flex items-center space-x-2">
                   <Phone className="h-5 w-5 text-foreground" />
                   <span>Contact Number: 9051618504</span>
@@ -54,7 +54,7 @@ export function Location() {
               <h3 className="font-sans font-semibold text-xl text-foreground mb-3">
                 Business Hours
               </h3>
-              <div className="space-y-1 font-sans text-muted-foreground">
+              <div className="space-y-1 font-sans text-sm md:text-base text-muted-foreground">
                 <p>Monday to Saturday: 9:30 AM – 7:30 PM</p>
                 <p>Sunday: Closed</p>
               </div>

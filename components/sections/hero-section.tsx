@@ -38,7 +38,7 @@ export function HeroSection() {
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 font-serif">
               Best Interior Designers in Kolkata
             </h1>
-            <p className="text-lg md:text-xl mb-2 leading-relaxed opacity-90 max-w-[50rem]">
+            <p className="text-sm md:text-lg lg:text-xl mb-2 leading-relaxed opacity-90 max-w-[50rem]">
               Experience unmatched transparency and peace of mind in interior
               design with KET Design – Your Space, Our Passion.
             </p>

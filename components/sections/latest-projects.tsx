@@ -14,7 +14,7 @@ export function LatestProjects() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">Latest Projects</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
             Discover our recent work and see how we transform spaces into extraordinary experiences
           </p>
         </div>
@@ -32,7 +32,7 @@ export function LatestProjects() {
                 </div>
                 <div className="p-4">
                   <h3 className="font-semibold mb-2 font-serif text-foreground">{project.title}</h3>
-                  <span className="text-sm text-accent font-medium">{project.category}</span>
+                  <span className="text-xs md:text-sm text-accent font-medium">{project.category}</span>
                 </div>
               </CardContent>
             </Card>

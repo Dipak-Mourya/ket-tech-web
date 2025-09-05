@@ -40,7 +40,7 @@ export function OurOfferings() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-serif font-bold text-3xl md:text-4xl text-foreground mb-4">Our Offerings</h2>
-          <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="font-sans text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
             Comprehensive interior design services tailored to meet your unique needs and preferences.
           </p>
         </div>
@@ -53,7 +53,7 @@ export function OurOfferings() {
                   <offering.icon className="h-8 w-8 text-accent" />
                 </div>
                 <h3 className="font-sans font-semibold text-xl text-foreground mb-3">{offering.title}</h3>
-                <p className="font-sans text-muted-foreground leading-relaxed">{offering.description}</p>
+                <p className="font-sans text-sm md:text-base text-muted-foreground leading-relaxed">{offering.description}</p>
               </CardContent>
             </Card>
           ))}

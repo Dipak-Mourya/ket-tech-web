@@ -35,7 +35,7 @@ export function ProjectsContent() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-serif font-bold text-3xl md:text-4xl text-foreground mb-4">Featured Projects</h2>
-            <p className="font-serif text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="font-serif text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
               Discover our portfolio of stunning interior design projects across residential and commercial spaces.
             </p>
           </div>
@@ -57,7 +57,7 @@ export function ProjectsContent() {
                 </div>
                 <div className="p-6">
                   <h3 className="font-serif font-semibold text-xl text-foreground mb-2">{project.title}</h3>
-                  <p className="font-serif text-muted-foreground">
+                  <p className="font-serif text-sm md:text-base text-muted-foreground">
                     Professional interior design with attention to detail
                   </p>
                 </div>
@@ -72,7 +72,7 @@ export function ProjectsContent() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-serif font-bold text-3xl md:text-4xl text-foreground mb-4">Client Reviews</h2>
-            <p className="font-serif text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="font-serif text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
               Read what our satisfied clients have to say about their experience with KET Design.
             </p>
           </div>
@@ -104,11 +104,11 @@ export function ProjectsContent() {
                         ))}
                       </div>
                     </div>
-                    <p className="font-serif text-lg text-muted-foreground mb-6 leading-relaxed italic">
+                    <p className="font-serif text-sm md:text-base lg:text-lg text-muted-foreground mb-6 leading-relaxed italic">
                       "{review.review}"
                     </p>
                     <div className="border-t pt-4">
-                      <p className="font-sans font-semibold text-foreground text-lg mb-1">{review.name}</p>
+                      <p className="font-sans font-semibold text-foreground text-base md:text-lg mb-1">{review.name}</p>
                       <p className="font-serif text-sm text-muted-foreground">{review.project}</p>
                     </div>
                   </Card>
