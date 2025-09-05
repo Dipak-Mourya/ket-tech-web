@@ -14,6 +14,12 @@ import { Badge } from "../ui/badge";
 import Image from "next/image";
 
 export function ProjectsContent() {
+  const getInitials = (name: string): string => {
+    return name
+      .split(' ')
+      .map(word => word.charAt(0).toUpperCase())
+      .join('');
+  };
   return (
     <main className="min-h-screen">
       {/* Header rendered by root layout */}
@@ -124,6 +130,15 @@ export function ProjectsContent() {
               {clientReviewsData.map((review) => (
                 <SwiperSlide key={review.id}>
                   <Card className="p-8 text-center">
+                    {/* Avatar with initials */}
+                    <div className="flex justify-center mb-4">
+                      <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center shadow-md">
+                        <span className="text-white font-semibold text-sm">
+                          {getInitials(review.name)}
+                        </span>
+                      </div>
+                    </div>
+
                     <div className="flex justify-center mb-4">
                       <div className="flex space-x-1">
                         {[...Array(review.rating)].map((_, i) => (
