@@ -13,11 +13,11 @@ export function WhyChooseUs() {
   };
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-background via-muted/20 to-muted/30 relative">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-0 w-64 h-64 bg-accent/3 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-accent/2 rounded-full blur-3xl"></div>
+    <section id="about" className="py-20 bg-gradient-to-br from-background via-muted/20 to-muted/30 relative overflow-hidden">
+      {/* Background decorative elements - contained within section */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 -left-32 w-64 h-64 bg-accent/3 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 -right-40 w-80 h-80 bg-accent/2 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 relative">
@@ -57,8 +57,9 @@ export function WhyChooseUs() {
               Let's Connect →
             </Button>
           </div>
-          <div className="relative">
-            <div className="absolute -top-4 -left-4 w-full h-full bg-gradient-to-br from-accent/10 to-transparent rounded-2xl"></div>
+          <div className="relative mx-4 md:mx-0">
+            {/* Background decoration - safer positioning */}
+            <div className="absolute -inset-2 bg-gradient-to-br from-accent/10 to-transparent rounded-2xl -z-10"></div>
             
             <Card className="overflow-hidden shadow-2xl border-0 relative">
               <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
@@ -74,9 +75,9 @@ export function WhyChooseUs() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
             </Card>
             
-            {/* Floating accent elements */}
-            <div className="absolute -bottom-6 -right-6 w-16 h-16 bg-accent/20 rounded-full blur-xl"></div>
-            <div className="absolute -top-6 -left-6 w-12 h-12 bg-accent/15 rounded-full blur-lg"></div>
+            {/* Floating accent elements - contained within bounds */}
+            <div className="absolute bottom-2 right-2 w-16 h-16 bg-accent/20 rounded-full blur-xl"></div>
+            <div className="absolute top-2 left-2 w-12 h-12 bg-accent/15 rounded-full blur-lg"></div>
           </div>
         </div>
       </div>
