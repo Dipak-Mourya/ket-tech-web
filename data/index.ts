@@ -46,7 +46,6 @@ export interface ClientReview {
   project: string;
   rating: number;
   review: string;
-  image: string;
 }
 interface InfoSection {
   title: string;
@@ -290,59 +289,62 @@ export const statisticsData: Statistic[] = [
 export const clientReviewsData: ClientReview[] = [
   {
     id: 1,
-    name: "Rajesh Kumar",
-    project: "Luxury Villa Interior",
+    name: "Punam Das",
+    project: "Home Interior",
     rating: 5,
     review:
-      "KET Design exceeded our expectations with their innovative approach and attention to detail. Our villa looks absolutely stunning!",
-    image: "/indian-man-portrait.png",
+      "The designers transformed our house into a dream home. Every corner reflects our taste, yet feels more stylish than we imagined.",
   },
   {
     id: 2,
-    name: "Priya Sharma",
-    project: "Modern Apartment Design",
+    name: "Samir Bairagi",
+    project: "Full Home Interiors",
     rating: 5,
     review:
-      "Professional team with excellent communication. They understood our vision perfectly and delivered beyond our dreams.",
-    image: "/indian-woman-portrait.png",
+      "Very well experience... super happy with the interiors done by this company... totally worth it.",
   },
   {
     id: 3,
-    name: "Amit Patel",
-    project: "Office Space Renovation",
+    name: "Chiranjit Gure",
+    project: "Apartment Design",
     rating: 5,
     review:
-      "The office transformation has boosted our team's productivity. KET Design's space planning is exceptional.",
-    image: "/indian-businessman-portrait.png",
+      "Outstanding service and beautiful execution. Highly satisfied with their work.",
   },
   {
     id: 4,
-    name: "Sneha Gupta",
-    project: "Restaurant Interior",
+    name: "Jayanti Panda",
+    project: "Home Renovation",
     rating: 5,
     review:
-      "Our restaurant's ambiance has attracted more customers. The design perfectly captures our brand essence.",
-    image: "/indian-woman-business-owner-portrait.png",
+      "Amazing team, flawless execution & on-time delivery.",
   },
   {
     id: 5,
-    name: "Vikram Singh",
-    project: "Penthouse Design",
+    name: "Pritish Sen",
+    project: "Custom Interiors",
     rating: 5,
     review:
-      "Luxury redefined! KET Design created a masterpiece that reflects our lifestyle perfectly.",
-    image: "/indian-man-executive-portrait.png",
+      "Very nice work 👌👌👷👷",
   },
   {
     id: 6,
-    name: "Kavya Reddy",
-    project: "Boutique Store Design",
+    name: "Anushree Das",
+    project: "Modular Kitchen & Wardrobe",
     rating: 5,
     review:
-      "The store design has significantly improved our sales. Customers love the aesthetic and functionality.",
-    image: "/indian-woman-entrepreneur-portrait.png",
+      "Loved the quality and finish. They really care about the details.",
+  },
+  {
+    id: 7,
+    name: "Akash Seal",
+    project: "Complete Home Interior",
+    rating: 5,
+    review:
+      "Professional and creative! Highly recommend for full house interiors.",
   },
 ];
+
 
 // YouTube videos data
 export const youtubeVideosData = [

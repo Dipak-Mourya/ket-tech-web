@@ -201,7 +201,7 @@ export function ProjectsContent() {
               className="font-serif font-medium border-accent text-accent hover:bg-accent-foreground hover:text-accent  bg-transparent cursor-pointer"
               onClick={() =>
                 window.open(
-                  "https://www.google.com/search?q=KET+Design+reviews",
+                  "https://www.google.com/maps/place/KET+Design/@22.5638025,88.3911664,17z/data=!4m8!3m7!1s0x3a027755af72115b:0x3c64d4c5cb38456e!8m2!3d22.5637976!4d88.3937413!9m1!1b1!16s%2Fg%2F11w_hvfncv?entry=ttu&g_ep=EgoyMDI1MDkwMi4wIKXMDSoASAFQAw%3D%3D",
                   "_blank"
                 )
               }
