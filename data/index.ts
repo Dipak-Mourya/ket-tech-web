@@ -1,53 +1,74 @@
 import { Home, Building, Ruler, Paintbrush } from "lucide-react";
 
 export interface Project {
-  id: number
-  title: string
-  image: string
-  category: string
+  id: number;
+  title: string;
+  image: string;
+  category: string;
 }
 
 import type { ReactNode } from "react";
 import React from "react";
 
 export interface Service {
-  id: number
-  title: string
-  description: string
-  icon: ReactNode
+  id: number;
+  title: string;
+  description: string;
+  icon: ReactNode;
 }
 
 export interface Testimonial {
-  id: number
-  name: string
-  role: string
-  company: string
-  content: string
-  rating: number
-  image: string
+  id: number;
+  name: string;
+  role: string;
+  company: string;
+  content: string;
+  rating: number;
+  image: string;
 }
 
 export interface FAQ {
-  id: number
-  question: string
-  answer: string
+  id: number;
+  question: string;
+  answer: string;
 }
 
 export interface Statistic {
-  id: number
-  number: string
-  label: string
-  suffix?: string
+  id: number;
+  number: string;
+  label: string;
+  suffix?: string;
 }
 
 export interface ClientReview {
-  id: number
-  name: string
-  project: string
-  rating: number
-  review: string
-  image: string
+  id: number;
+  name: string;
+  project: string;
+  rating: number;
+  review: string;
+  image: string;
 }
+interface InfoSection {
+  title: string;
+  content: string;
+}
+
+//Info data
+export const infoSections: InfoSection[] = [
+  {
+    title: "Our Mission",
+    content: `At Ket Design, our mission is to create interiors that go beyond aesthetics—spaces that tell stories, reflect personalities, and enhance everyday living. Since 2015, we’ve been passionate about designing environments that balance beauty with functionality, tradition with modernity, and creativity with comfort. We aim to make exceptional design accessible, ensuring every home, office, or commercial space we create not only meets clients’ needs but also inspires them. Our mission is to transform ideas into timeless designs that bring joy, purpose, and value.`,
+  },
+  {
+    title: "Our Vision",
+    content: `Our vision is to create spaces that inspire, offer comfort, and reflect the unique identity of every individual or brand. We believe great design goes beyond aesthetics—it should elevate lifestyles, evoke emotion, and stand the test of time. We balance elegance, innovation, and functionality in every project, crafting interiors that exceed expectations—spaces that feel personal, purposeful, and enduring.`,
+  },
+  {
+    title: "Our Scope",
+    content: `Our scope goes beyond decorating interiors—we create spaces that inspire, function seamlessly, and endure. Serving residential, commercial, and corporate clients, each project is driven by creativity, precision, and deep client understanding. From tailored residential interiors to modern workspaces and retail environments, we deliver thoughtful, functional, and lasting spaces through smooth turnkey solutions from concept to completion.`,
+  },
+];
+
 
 // Projects data
 export const projectsData: Project[] = [
@@ -123,35 +144,39 @@ export const projectsData: Project[] = [
     image: "/projects/modern-living-room.png",
     category: "Commercial",
   },
-]
+];
 
 // Services data
 export const servicesData: Service[] = [
   {
     id: 1,
     title: "Residential Interior Design",
-    description: "Elegant, functional homes designed to reflect your lifestyle with comfort and style.",
+    description:
+      "Elegant, functional homes designed to reflect your lifestyle with comfort and style.",
     icon: React.createElement(Home, { className: "h-8 w-8 " }),
   },
   {
     id: 2,
     title: "Commercial Interior Design",
-    description: "Modern, innovative spaces that enhance productivity and create lasting impressions.",
+    description:
+      "Modern, innovative spaces that enhance productivity and create lasting impressions.",
     icon: React.createElement(Building, { className: "h-8 w-8" }),
   },
   {
     id: 3,
     title: "3D Design & Visualization",
-    description: "See your dream space come alive with realistic 3D concepts before execution.",
+    description:
+      "See your dream space come alive with realistic 3D concepts before execution.",
     icon: React.createElement(Ruler, { className: "h-8 w-8 " }),
   },
   {
     id: 4,
     title: "Renovation & Remodeling",
-    description: "Transform your old interiors into fresh, timeless, and modern spaces.",
-    icon:React.createElement(Paintbrush, { className: "h-8 w-8 " }),
+    description:
+      "Transform your old interiors into fresh, timeless, and modern spaces.",
+    icon: React.createElement(Paintbrush, { className: "h-8 w-8 " }),
   },
-]
+];
 
 // Testimonials data
 export const testimonialsData: Testimonial[] = [
@@ -170,7 +195,8 @@ export const testimonialsData: Testimonial[] = [
     name: "Michael Chen",
     role: "Business Owner",
     company: "Tech Startup",
-    content: "The office design exceeded our expectations. It's both modern and conducive to productivity.",
+    content:
+      "The office design exceeded our expectations. It's both modern and conducive to productivity.",
     rating: 5,
     image: "/professional-man-portrait.png",
   },
@@ -179,11 +205,12 @@ export const testimonialsData: Testimonial[] = [
     name: "Emily Davis",
     role: "Restaurant Owner",
     company: "Fine Dining",
-    content: "Our restaurant's interior design has received countless compliments from customers. Excellent work!",
+    content:
+      "Our restaurant's interior design has received countless compliments from customers. Excellent work!",
     rating: 5,
     image: "/professional-woman-chef.png",
   },
-]
+];
 
 // FAQ data
 export const faqData: FAQ[] = [
@@ -231,7 +258,6 @@ export const faqData: FAQ[] = [
   },
 ];
 
-
 // Statistics data
 export const statisticsData: Statistic[] = [
   {
@@ -258,7 +284,7 @@ export const statisticsData: Statistic[] = [
     label: "Team Members",
     suffix: "+",
   },
-]
+];
 
 // Client reviews data for projects page
 export const clientReviewsData: ClientReview[] = [
@@ -294,7 +320,8 @@ export const clientReviewsData: ClientReview[] = [
     name: "Sneha Gupta",
     project: "Restaurant Interior",
     rating: 5,
-    review: "Our restaurant's ambiance has attracted more customers. The design perfectly captures our brand essence.",
+    review:
+      "Our restaurant's ambiance has attracted more customers. The design perfectly captures our brand essence.",
     image: "/indian-woman-business-owner-portrait.png",
   },
   {
@@ -302,7 +329,8 @@ export const clientReviewsData: ClientReview[] = [
     name: "Vikram Singh",
     project: "Penthouse Design",
     rating: 5,
-    review: "Luxury redefined! KET Design created a masterpiece that reflects our lifestyle perfectly.",
+    review:
+      "Luxury redefined! KET Design created a masterpiece that reflects our lifestyle perfectly.",
     image: "/indian-man-executive-portrait.png",
   },
   {
@@ -310,10 +338,11 @@ export const clientReviewsData: ClientReview[] = [
     name: "Kavya Reddy",
     project: "Boutique Store Design",
     rating: 5,
-    review: "The store design has significantly improved our sales. Customers love the aesthetic and functionality.",
+    review:
+      "The store design has significantly improved our sales. Customers love the aesthetic and functionality.",
     image: "/indian-woman-entrepreneur-portrait.png",
   },
-]
+];
 
 // YouTube videos data
 export const youtubeVideosData = [
@@ -334,7 +363,6 @@ export const youtubeVideosData = [
   },
 ];
 
-
 // Company information
 export const companyInfo = {
   name: "KET Design",
@@ -351,4 +379,4 @@ export const companyInfo = {
     linkedin: "https://linkedin.com/company/ketdesign",
     youtube: "https://youtube.com/ketdesign",
   },
-}
+};
