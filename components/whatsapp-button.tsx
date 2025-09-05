@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { X } from 'lucide-react';
 
 const openWhatsApp = () => {
-  const message = encodeURIComponent('Hello, I have a question regarding PAWAN.');
+  const message = encodeURIComponent('Hi, I am interested in your interior design services. Could you help me get started?');
   const phoneNumber = '+919051618504';
   window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
 };
