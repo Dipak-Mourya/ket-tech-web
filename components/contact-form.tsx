@@ -310,6 +310,7 @@ export function ContactForm({
                   <Textarea
                     id="message"
                     name="message"
+                    placeholder="Type your message..."
                     value={formData.message}
                     onChange={handleChange}
                     rows={5}

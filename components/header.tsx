@@ -7,10 +7,12 @@ import { Star } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
+import { AppointmentForm } from "@/components/appointment-form";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showAppointmentModal, setShowAppointmentModal] = useState(false);
 
   // Change header opacity on scroll
   React.useEffect(() => {
@@ -24,22 +26,8 @@ export function Header() {
   const pathname = usePathname();
 
   const handleContactClick = () => {
-    if (pathname === "/") {
-      // If on home page, just scroll to contact section
-      const element = document.getElementById("contact");
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    } else {
-      // If on other pages, navigate to home page and then scroll to contact
-      router.push("/");
-      setTimeout(() => {
-        const element = document.getElementById("contact");
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-        }
-      }, 100);
-    }
+    // Always show the modal instead of scrolling/navigating
+    setShowAppointmentModal(true);
     setIsMenuOpen(false);
   };
 
@@ -112,7 +100,7 @@ export function Header() {
               className="font-sans cursor-pointer px-4 py-2 bg-foreground text-white border-b-2 transition-colors rounded-lg flex items-center space-x-2"
             >
               <span>Book Appointment</span>
-              <Calendar   className="w-4 h-4 text-white " />
+              <Calendar className="w-4 h-4 text-white " />
             </Button>
           </nav>
 
@@ -186,6 +174,11 @@ export function Header() {
           </nav>
         )}
       </div>
+      <AppointmentForm
+        isOpen={showAppointmentModal}
+        onClose={() => setShowAppointmentModal(false)}
+        buttonText="Book Your Appointment"
+      />
     </header>
   );
 }
