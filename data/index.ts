@@ -380,3 +380,21 @@ export const companyInfo = {
     youtube: "https://youtube.com/ketdesign",
   },
 };
+
+  export const services = [
+    "Residential Interior Design",
+    "Commercial & Office Spaces",
+    "Modular Kitchens & Wardrobes",
+    "3D Design & Visualization",
+    "Turnkey Project Solutions",
+    "Space Planning & Consultation",
+  ];
+
+export  const futureGoals = [
+    "Expand across major Indian cities",
+    "Integrate smart & sustainable designs",
+    "Enhance turnkey project solutions",
+    "Innovate with VR & advanced 3D technology",
+    "Create landmark signature projects",
+    "Strengthen long-term client relationships",
+  ];
