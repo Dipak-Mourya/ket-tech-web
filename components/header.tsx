@@ -65,10 +65,10 @@ export function Header() {
               width={120}
               height={48}
               priority
-              className="h-14 w-full"
+              className="h-12 w-full"
               style={{
-                mixBlendMode: 'darken',
-                backgroundColor: 'transparent'
+                mixBlendMode: "darken",
+                backgroundColor: "transparent",
               }}
               draggable={false}
             />
@@ -110,7 +110,7 @@ export function Header() {
               onClick={handleContactClick}
               className="font-sans cursor-pointer px-4 py-2  bg-foreground text-white border-b-2 transition-colors rounded-lg "
             >
-              Appointment
+              Book Appointment
             </Button>
           </nav>
 
@@ -122,9 +122,15 @@ export function Header() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
-              <X className="h-10 w-10 stroke-[2] rounded-lg bg-neutral-800 p-0 text-accent-foreground font-extrabold cursor-pointer" size={24}/>
+              <X
+                className="h-10 w-10 stroke-[2] rounded-lg bg-neutral-800 p-0 text-accent-foreground font-extrabold cursor-pointer"
+                size={24}
+              />
             ) : (
-              <Menu className="h-20 w-20 stroke-[2] rounded-lg bg-neutral-800 p-0 text-accent-foreground font-extrabold cursor-pointer" size={24}/>
+              <Menu
+                className="h-20 w-20 stroke-[2] rounded-lg bg-neutral-800 p-0 text-accent-foreground font-extrabold cursor-pointer"
+                size={24}
+              />
             )}
           </Button>
         </div>
@@ -169,9 +175,9 @@ export function Header() {
 
               <Button
                 onClick={handleContactClick}
-                className="font-sans cursor-pointer px-4 py-2  bg-foreground text-white border-b-2 transition-colors rounded-lg w-[7rem]"
+                className="font-sans cursor-pointer px-4 py-2  bg-foreground text-white border-b-2 transition-colors rounded-lg w-[10rem]"
               >
-                Appointment
+               Book Appointment
               </Button>
             </div>
           </nav>
