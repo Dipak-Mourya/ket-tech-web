@@ -4,6 +4,7 @@ import { projectsData } from "@/data"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import Image from "next/image"
 
 export function LatestProjects() {
   // Show only first 8 projects on home page
@@ -24,15 +25,21 @@ export function LatestProjects() {
             <Card key={project.id} className="overflow-hidden hover:shadow-lg transition-shadow">
               <CardContent className="p-0">
                 <div className="relative group">
-                  <img
+                  <Image
                     src={project.image || "/fallback/placeholder.svg"}
                     alt={project.title}
-                    className="w-full h-64 object-cover transition-transform group-hover:scale-110"
+                    width={400}
+                    height={240}
+                    className="w-full h-60 object-cover"
+                    loading="lazy"
+                    draggable={false}
                   />
-                </div>
-                <div className="p-4">
-                  <h3 className="font-semibold mb-2 font-serif text-foreground">{project.title}</h3>
-                  <span className="text-xs md:text-sm text-accent font-medium">{project.category}</span>
+                  <div className="absolute top-2 left-2 bg-accent bg-opacity-10 text-white px-3 py-1 rounded-full text-xs md:text-sm font-medium">
+                    {project.category}
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 bg-white text-accent p-4 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out">
+                    <h3 className="font-semibold mb-2 font-serif text-lg md:text-xl">{project.title}</h3>
+                  </div>
                 </div>
               </CardContent>
             </Card>

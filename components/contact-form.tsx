@@ -151,7 +151,7 @@ export function ContactForm() {
         <div className="max-w-2xl mx-auto">
           <Card>
             <CardHeader>
-              <CardTitle className="font-sans text-2xl text-center">
+              <CardTitle className="font-sans text-2xl text-center mt-4">
                 Contact Form
               </CardTitle>
             </CardHeader>
@@ -312,7 +312,7 @@ export function ContactForm() {
                     </div>
                   )}
                 </div>
-                <div className="flex flex-row md:justify-start md:items-center gap-4 mt-6">
+                <div className="flex flex-row md:justify-start md:items-center gap-4 my-4">
                   <Button
                     type="submit"
                     size="sm"

@@ -10,7 +10,7 @@ export default function AboutPage() {
       {/* Hero Banner */}
       <section className="relative h-96 flex items-center justify-center overflow-hidden mt-20">
         <img
-          src="/about/modern-office-interior-design-team-workspace.png"
+          src="/about/modern-office-interior-design-team-workspace.webp"
           alt="About KET Design"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -40,7 +40,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <Card className="overflow-hidden">
-                <img src="/about/modern-office-interior-design-team-workspace.png" alt="KET Design team" className="w-full h-80 object-cover" />
+                <img src="/about/modern-office-interior-design-team-workspace.webp" alt="KET Design team" className="w-full h-80 object-cover" />
               </Card>
             </div>
           </div>

@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import Image from "next/image";
 
 export function WhyChooseUs() {
   const scrollToSection = (sectionId: string) => {
@@ -21,18 +22,24 @@ export function WhyChooseUs() {
             </h2>
             <div className="space-y-4 mb-8">
               <p className="font-sans text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed">
-                At KET Design, we don’t just design interiors — we craft
-                personalized, timeless spaces that reflect your lifestyle and
-                values.
+                At KET Design, we don’t just design spaces — we craft
+                experiences. Every home, office, or commercial space we create
+                is a reflection of the people who live and work in it. With a
+                team of passionate designers and years of expertise, we bring
+                together creativity, innovation, and practicality to deliver
+                interiors that are both timeless and functional.
               </p>
               <p className="font-sans text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed">
-                We use only premium materials and proven techniques to ensure
-                long-lasting quality. From consultation to final handover, we
-                handle every detail with care and transparency.
+                We believe quality is the foundation of great design — that’s
+                why we use only premium materials and proven techniques to
+                deliver timeless spaces. From consultation to handover, we
+                ensure a smooth, transparent, and stress-free experience through
+                end-to-end solutions.
               </p>
               <p className="font-sans text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed">
-                Our client-first approach, on-time delivery, and commitment to
-                elegant functionality set us apart in every project.
+                We design with your lifestyle in mind — creating elegant,
+                personalized spaces delivered on time with a client-first
+                approach.
               </p>
             </div>
 
@@ -46,9 +53,12 @@ export function WhyChooseUs() {
           </div>
           <div className="relative">
             <Card className="overflow-hidden">
-              <img
-                src="/about/modern-office-interior-design-team-workspace.png"
+              <Image
+                draggable={false}
+                src="/about/modern-office-interior-design-team-workspace.webp"
                 alt="Professional interior design team"
+                width={800}
+                height={600}
                 className="w-full h-96 object-cover"
               />
             </Card>

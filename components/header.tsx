@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Calendar, CalendarArrowDown, Clock, Menu, X } from "lucide-react";
+import { Star } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
@@ -108,9 +109,10 @@ export function Header() {
             </Link>
             <Button
               onClick={handleContactClick}
-              className="font-sans cursor-pointer px-4 py-2  bg-foreground text-white border-b-2 transition-colors rounded-lg "
+              className="font-sans cursor-pointer px-4 py-2 bg-foreground text-white border-b-2 transition-colors rounded-lg flex items-center space-x-2"
             >
-              Book Appointment
+              <span>Book Appointment</span>
+              <Calendar   className="w-4 h-4 text-white animate-pulse" />
             </Button>
           </nav>
 
@@ -175,9 +177,10 @@ export function Header() {
 
               <Button
                 onClick={handleContactClick}
-                className="font-sans cursor-pointer px-4 py-2  bg-foreground text-white border-b-2 transition-colors rounded-lg w-[10rem]"
+                className="font-sans cursor-pointer px-4 py-2  bg-foreground text-white border-b-2 transition-colors rounded-lg w-[11rem]"
               >
-               Book Appointment
+                <span>Book Appointment</span>
+                <Calendar className="w-4 h-4 text-white animate-pulse" />
               </Button>
             </div>
           </nav>

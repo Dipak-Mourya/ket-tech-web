@@ -1,3 +1,5 @@
+import { Home, Building, Ruler, Paintbrush } from "lucide-react";
+
 export interface Project {
   id: number
   title: string
@@ -5,11 +7,14 @@ export interface Project {
   category: string
 }
 
+import type { ReactNode } from "react";
+import React from "react";
+
 export interface Service {
   id: number
   title: string
   description: string
-  icon: string
+  icon: ReactNode
 }
 
 export interface Testimonial {
@@ -124,27 +129,27 @@ export const projectsData: Project[] = [
 export const servicesData: Service[] = [
   {
     id: 1,
-    title: "Interior Design",
-    description: "Complete interior design solutions for residential and commercial spaces",
-    icon: "🏠",
+    title: "Residential Interior Design",
+    description: "Elegant, functional homes designed to reflect your lifestyle with comfort and style.",
+    icon: React.createElement(Home, { className: "h-8 w-8 " }),
   },
   {
     id: 2,
-    title: "Architecture",
-    description: "Innovative architectural designs that blend functionality with aesthetics",
-    icon: "🏗️",
+    title: "Commercial Interior Design",
+    description: "Modern, innovative spaces that enhance productivity and create lasting impressions.",
+    icon: React.createElement(Building, { className: "h-8 w-8" }),
   },
   {
     id: 3,
-    title: "Space Planning",
-    description: "Optimal space utilization and layout planning for maximum efficiency",
-    icon: "📐",
+    title: "3D Design & Visualization",
+    description: "See your dream space come alive with realistic 3D concepts before execution.",
+    icon: React.createElement(Ruler, { className: "h-8 w-8 " }),
   },
   {
     id: 4,
-    title: "3D Visualization",
-    description: "Realistic 3D renders and virtual tours of your future space",
-    icon: "🎨",
+    title: "Renovation & Remodeling",
+    description: "Transform your old interiors into fresh, timeless, and modern spaces.",
+    icon:React.createElement(Paintbrush, { className: "h-8 w-8 " }),
   },
 ]
 
