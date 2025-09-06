@@ -79,7 +79,7 @@ export function ProjectsContent() {
                     draggable={false}
                   />
                   <div className="absolute top-4 left-4 z-20">
-                    <Badge className="bg-white/20 text-accent border-white/30 hover:bg-white/30 px-4 py-2 rounded-full text-xs md:text-sm font-medium shadow-lg backdrop-blur-sm">
+                    <Badge className="bg-white/20  border-white/30 hover:bg-white/30 px-4 py-2 rounded-full text-xs md:text-sm font-medium shadow-lg backdrop-blur-sm text-white">
                       {project.category}
                     </Badge>
                   </div>
@@ -89,7 +89,7 @@ export function ProjectsContent() {
                     {project.title}
                   </h3>
                   <p className="font-serif text-sm md:text-base text-muted-foreground">
-                    Professional interior design with attention to detail
+                    {project.description}
                   </p>
                 </div>
               </Card>

@@ -2,22 +2,15 @@
 
 import { useEffect, useState } from "react"
 import Image from "next/image"
+import { OurCustomerData } from "@/data"
 
-const mediaLogos = [
-  { name: "Times of India", logo: "/clients/deccan-herald-logo.png" },
-  { name: "Hindustan Times", logo: "/clients/deccan-herald-logo.png" },
-  { name: "Economic Times", logo: "clients/brm.png" },
-  { name: "Indian Express", logo: "/clients/deccan-herald-logo.png" },
-  { name: "Deccan Herald", logo: "/clients/brm.png" },
-  { name: "Business Standard", logo: "/clients/deccan-herald-logo.png" },
-]
 
 export function OurCustomer() {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % (mediaLogos.length - 3))
+      setCurrentIndex((prev) => (prev + 1) % (OurCustomerData.length - 3))
     }, 3000)
 
     return () => clearInterval(interval)
@@ -27,7 +20,7 @@ export function OurCustomer() {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="font-serif font-bold text-3xl md:text-4xl text-foreground mb-4">Our Customers</h2>
+          <h2 className="font-serif font-bold text-3xl md:text-4xl text-foreground mb-4">Our Trusted Partners</h2>
           <p className="font-sans text-sm md:text-base lg:text-lg text-muted-foreground">Trusted by leading organizations</p>
         </div>
 
@@ -36,15 +29,15 @@ export function OurCustomer() {
             className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${currentIndex * (100 / 4)}%)` }}
           >
-            {mediaLogos.map((media, index) => (
+            {OurCustomerData.map((media, index) => (
               <div key={index} className="flex-shrink-0 w-1/4 px-4">
                 <div className="flex items-center justify-center h-20 bg-muted/30 rounded-lg">
                   <Image
                     src={media.logo || "/fallback/placeholder.svg"}
                     alt={media.name}
-                    width={48}
-                    height={48}
-                    className="max-h-12 max-w-full object-contain opacity-90 hover:opacity-100 transition-opacity cursor-pointer"
+                    width={68}
+                    height={68}
+                    className="max-h-14 max-w-full object-contain opacity-90 hover:opacity-100 transition-opacity cursor-pointer"
                     draggable={false}
                     loading="lazy"
                   />
