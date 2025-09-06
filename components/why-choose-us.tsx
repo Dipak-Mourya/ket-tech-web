@@ -28,7 +28,7 @@ export function WhyChooseUs() {
             </h2>
             <div className="space-y-4 mb-8">
               <p className="font-sans text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed">
-                At KET Design, we don’t just design spaces — we craft
+                At <strong className="text-foreground">KET Design</strong>, we don’t just design spaces — we craft
                 experiences. Every home, office, or commercial space we create
                 is a reflection of the people who live and work in it. With a
                 team of passionate designers and years of expertise, we bring
