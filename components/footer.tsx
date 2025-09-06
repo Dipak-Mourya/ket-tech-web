@@ -194,7 +194,7 @@ export function Footer() {
           </p>
           <div className="flex space-x-6 font-sans text-sm opacity-90">
             <span className="hover:opacity-100 cursor-auto transition-opacity">
-              Designed & Crafted By <strong>ZapCode Labs</strong>
+              Designed & Crafted By <a href="https://dipakdev.in" target="_blank"><strong>Dipak</strong></a>
             </span>
           </div>
         </div>
