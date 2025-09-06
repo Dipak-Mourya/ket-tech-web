@@ -84,11 +84,8 @@ export function CostCalculator({
   const handleWhatsApp = () => {
     const selectedServiceName =
       Claculatorservices.find((s) => s.id === selectedService)?.name || "";
-      const contactLabel = contactType === "email" ? "Email" : "Phone";
-      const message = `Hi! I'm ${name}. I'm interested in your interior design services.
-      Selected Service: ${selectedServiceName}
-      ${contactLabel}: ${contact}
-      Please provide me with a detailed quote.`;
+    const contactLabel = contactType === "email" ? "Email" : "Phone";
+    const message = `Hi! I'm ${name}.\nI'm interested in your interior design services.\n\nSelected Service: ${selectedServiceName}\n${contactLabel}: ${contact}\n\nPlease provide me with a detailed quote.`;
 
     const whatsappUrl = `https://wa.me/919051618504?text=${encodeURIComponent(
       message
