@@ -37,7 +37,7 @@ export function HeroSection() {
           {/* Left Side - Text Content */}
           <div className="text-center lg:text-left">
             <Badge className="mb-6 bg-white/20 text-white border-white/30 hover:bg-white/30">
-              Established 2015
+              <span className="my-1">Established 2015</span>
             </Badge>
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 font-serif">
               Best Interior Designers in Kolkata
