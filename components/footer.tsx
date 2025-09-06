@@ -11,7 +11,7 @@ export function Footer() {
             <h3 className="font-sans font-bold text-2xl">
               {" "}
               <Image
-                src="/logo/profile-logo.jpg"
+                src="/logo/profile-footer-logo.jpg"
                 alt="KET Design Logo"
                 width={120}
                 height={48}

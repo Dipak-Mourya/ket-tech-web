@@ -201,7 +201,7 @@ export function AppointmentForm({
             <Button
               variant="ghost"
               size="icon"
-              className="absolute right-4 top-4 cursor-pointer"
+              className="absolute right-4 top-4 cursor-pointer  hover:bg-primary/90"
               onClick={handleClose}
             >
               <X className="h-4 w-4" />
