@@ -14,23 +14,20 @@ import {
 import { X } from "lucide-react";
 import { Claculatorservices } from "@/data";
 
-
-
 interface CostCalculatorProps {
   heading?: string;
 }
 
-export function CostCalculator({ heading = "Get Your Instant Quote" }: CostCalculatorProps) {
+export function CostCalculator({
+  heading = "Get Your Instant Quote",
+}: CostCalculatorProps) {
   const [name, setName] = useState("");
   const [contact, setContact] = useState("");
   const [selectedService, setSelectedService] = useState("");
-  const [contactType, setContactType] = useState<'email' | 'phone' | null>(null);
-  const [errors, setErrors] = useState<{contact?: string}>({});
-
-  const getSelectedServicePrice = () => {
-    const service = Claculatorservices.find((s) => s.id === selectedService);
-    return service?.price || 0;
-  };
+  const [contactType, setContactType] = useState<"email" | "phone" | null>(
+    null
+  );
+  const [errors, setErrors] = useState<{ contact?: string }>({});
 
   const handleClearService = () => {
     setSelectedService("");
@@ -47,8 +44,8 @@ export function CostCalculator({ heading = "Get Your Instant Quote" }: CostCalcu
   };
 
   const detectContactType = (value: string) => {
-    if (validateEmail(value)) return 'email';
-    if (validatePhone(value)) return 'phone';
+    if (validateEmail(value)) return "email";
+    if (validatePhone(value)) return "phone";
     return null;
   };
 
@@ -65,18 +62,18 @@ export function CostCalculator({ heading = "Get Your Instant Quote" }: CostCalcu
     const type = detectContactType(value);
     setContactType(type);
 
-    if (type === 'email') {
+    if (type === "email") {
       setErrors({ contact: undefined });
-    } else if (type === 'phone') {
+    } else if (type === "phone") {
       setErrors({ contact: undefined });
     } else {
       // Check if it could be a partial email or phone
       const emailRegex = /^[^\s@]*@[^\s@]*$/;
       const phoneRegex = /^[6-9]?\d{0,9}$/;
-      
+
       if (emailRegex.test(value)) {
         setErrors({ contact: "Please enter a complete email address" });
-      } else if (phoneRegex.test(value.replace(/\D/g, ''))) {
+      } else if (phoneRegex.test(value.replace(/\D/g, ""))) {
         setErrors({ contact: "Please enter a complete 10-digit phone number" });
       } else {
         setErrors({ contact: "Please enter a valid email or phone number" });
@@ -85,18 +82,13 @@ export function CostCalculator({ heading = "Get Your Instant Quote" }: CostCalcu
   };
 
   const handleWhatsApp = () => {
-    const price = getSelectedServicePrice();
     const selectedServiceName =
       Claculatorservices.find((s) => s.id === selectedService)?.name || "";
-
-    const contactLabel = contactType === 'email' ? 'Email' : 'Phone';
-    const message = `Hi! I'm ${name}. I'm interested in your interior design services.
-
-Selected Service: ${selectedServiceName}
-Estimated Cost: ₹${price.toLocaleString()}
-${contactLabel}: ${contact}
-
-Please provide me with a detailed quote.`;
+      const contactLabel = contactType === "email" ? "Email" : "Phone";
+      const message = `Hi! I'm ${name}. I'm interested in your interior design services.
+      Selected Service: ${selectedServiceName}
+      ${contactLabel}: ${contact}
+      Please provide me with a detailed quote.`;
 
     const whatsappUrl = `https://wa.me/919051618504?text=${encodeURIComponent(
       message
@@ -104,8 +96,12 @@ Please provide me with a detailed quote.`;
     window.open(whatsappUrl, "_blank");
   };
 
-  const price = getSelectedServicePrice();
-  const hasSelection = selectedService && name.trim() !== "" && contact && contactType && !errors.contact;
+  const hasSelection =
+    selectedService &&
+    name.trim() !== "" &&
+    contact &&
+    contactType &&
+    !errors.contact;
 
   return (
     <div className="bg-slate-50 backdrop-blur-sm rounded-lg p-6 shadow-xl max-w-sm w-full">
@@ -140,11 +136,14 @@ Please provide me with a detailed quote.`;
           placeholder="Enter your email or phone number"
           value={contact}
           onChange={handleContactChange}
-          className={`w-full mt-2 bg-white text-black ${errors.contact ? 'border-red-500' : ''}`}
+          className={`w-full mt-2 bg-white text-black ${
+            errors.contact ? "border-red-500" : ""
+          }`}
         />
         {contactType && (
           <p className="text-green-600 text-xs mt-1">
-            ✓ Valid {contactType === 'email' ? 'email' : 'phone number'} detected
+            ✓ Valid {contactType === "email" ? "email" : "phone number"}{" "}
+            detected
           </p>
         )}
         {errors.contact && (
@@ -184,23 +183,6 @@ Please provide me with a detailed quote.`;
           )}
         </div>
       </div>
-
-      {/* Estimated Cost */}
-      {selectedService && (
-        <div className="mb-6 p-4 bg-blue-50 rounded-lg">
-          <div className="flex justify-between items-center">
-            <span className="text-lg font-semibold text-gray-800">
-              Estimated Cost:
-            </span>
-            <span className="md:text-2xl text-lg font-bold text-blue-600">
-              ₹{price.toLocaleString()}
-            </span>
-          </div>
-          <p className="text-xs text-gray-500 mt-1">
-            * This is an estimate. Final price may vary based on requirements.
-          </p>
-        </div>
-      )}
 
       {/* WhatsApp Button */}
       <Button

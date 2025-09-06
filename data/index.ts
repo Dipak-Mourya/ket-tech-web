@@ -54,37 +54,31 @@ interface InfoSection {
 interface Claculatorservices {
   id: string;
   name: string;
-  price: number;
 }
 
 //Cost Estimate data
 export const Claculatorservices: Claculatorservices[] = [
-  { id: "residential-interiors", name: "Residential Interiors", price: 60000 },
+  { id: "residential-interiors", name: "Residential Interiors" },
   {
     id: "office-workspace-design",
     name: "Office & Workspace Design",
-    price: 75000,
   },
   {
     id: "retail-commercial-interiors",
     name: "Retail & Commercial Interiors",
-    price: 80000,
   },
   {
     id: "modular-kitchens-wardrobes",
     name: "Modular Kitchens & Wardrobes",
-    price: 50000,
   },
   {
     id: "3d-design-visualization",
     name: "3D Design & Visualization",
-    price: 40000,
   },
-  { id: "turnkey-projects", name: "Turnkey Projects", price: 100000 },
+  { id: "turnkey-projects", name: "Turnkey Projects" },
   {
     id: "renovation-remodeling",
     name: "Renovation & Remodeling",
-    price: 70000,
   },
 ];
 
@@ -302,7 +296,7 @@ export const statisticsData: Statistic[] = [
   },
   {
     id: 2,
-    number: "8",
+    number: "10",
     label: "Years Experience",
     suffix: "+",
   },
