@@ -126,11 +126,11 @@ export function Footer() {
               </p>
               <p>
                 <a
-                  href="mailto:inquiry@kamsdesigner.com"
+                  href="mailto:ketdesignkolkata@gmail.com"
                   className="flex items-center space-x-2 hover:opacity-100 transition-opacity justify-center md:justify-start"
                 >
                   <Mail className="h-4 w-4 inline-block opacity-90" />
-                  <span>inquiry@kamsdesigner.com</span>
+                  <span>ketdesignkolkata@gmail.com</span>
                 </a>
               </p>
               <div className="pt-2">

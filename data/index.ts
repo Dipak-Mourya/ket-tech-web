@@ -3,6 +3,7 @@ export interface Project {
   title: string;
   image: string;
   category: string;
+  description?: string;
 }
 
 export interface Service {
@@ -104,75 +105,108 @@ export const infoSections: InfoSection[] = [
 export const projectsData: Project[] = [
   {
     id: 1,
-    title: "Modern Living Room Design",
-    image: "/projects/modern-living-room.png",
+    title: "Modern Kitchen and Dining",
+    image: "/projects/project1.webp",
     category: "Residential",
+    description: "Elegant kitchen with integrated dining space",
   },
   {
     id: 2,
-    title: "Contemporary Kitchen",
-    image: "/projects/modern-living-room.png",
+    title: "Compact Master Bedroom",
+    image: "/projects/project2.webp",
     category: "Residential",
+    description: "Stylish bedroom with integrated storage solutions",
   },
   {
     id: 3,
-    title: "Office Space Design",
-    image: "/projects/modern-living-room.png",
-    category: "Commercial",
+    title: "Compact Modular Kitchen",
+    image: "/projects/project3.webp",
+    category: "Residential",
+    description: "Efficient kitchen with sleek storage solutions",
   },
   {
     id: 4,
-    title: "Luxury Bedroom",
-    image: "/projects/modern-living-room.png",
+    title: "Geometric Pattern Kitchen",
+    image: "/projects/project4.webp",
     category: "Residential",
+    description: "Bold kitchen design with striking geometric tiles",
   },
   {
     id: 5,
-    title: "Restaurant Interior",
-    image: "/projects/modern-living-room.png",
-    category: "Commercial",
+    title: "Elegant Hall Interiors",
+    image: "/projects/project5.webp",
+    category: "Residential",
+    description: "Stylish living room with modern furniture and elegant decor",
   },
   {
     id: 6,
-    title: "Minimalist Bathroom",
-    image: "/projects/modern-living-room.png",
+    title: "Elegant Dining Area",
+    image: "/projects/project6.webp",
     category: "Residential",
+    description: "Sophisticated dining space with modern lighting and decor",
   },
   {
     id: 7,
-    title: "Corporate Lobby",
-    image: "/projects/modern-living-room.png",
-    category: "Commercial",
+    title: "Sophisticated Living Room",
+    image: "/projects/project7.webp",
+    category: "Residential",
+    description: "Luxurious living room with modern decor and lighting",
   },
   {
     id: 8,
-    title: "Cozy Study Room",
-    image: "/projects/modern-living-room.png",
-    category: "Residential",
+    title: "Elegant Dining Hall",
+    image: "/projects/project8.webp",
+    category: "Hospitality",
+    description: "Luxurious dining area with modern decor and lighting",
   },
   {
     id: 9,
-    title: "Boutique Store Design",
-    image: "/projects/modern-living-room.png",
-    category: "Commercial",
+    title: "Gaming Room Setup",
+    image: "/projects/project9.webp",
+    category: "Residential",
+    description: "Immersive gaming room with vibrant lighting and modern design",
   },
   {
     id: 10,
-    title: "Garden Patio",
-    image: "/projects/modern-living-room.png",
-    category: "Outdoor",
+    title: "Modern Dining Area",
+    image: "/projects/project10.webp",
+    category: "Residential",
+    description: "Elegant dining space with contemporary lighting and decor",
   },
   {
     id: 11,
-    title: "Hotel Suite",
-    image: "/projects/modern-living-room.png",
-    category: "Hospitality",
+    title: "Elegant Restaurant Dining Area",
+    image: "/projects/project11.webp",
+    category: "Commercial",
+    description: "Luxurious restaurant dining area with modern decor and lighting",
   },
   {
     id: 12,
-    title: "Cafe Interior",
-    image: "/projects/modern-living-room.png",
-    category: "Commercial",
+    title: "Luxurious Dining and Living Space",
+    image: "/projects/project12.webp",
+    category: "Residential",
+    description: "Elegant dining and living area with modern decor and lighting",
+  },
+  {
+    id: 13,
+    title: "Luxury Bedroom with Moonlit Decor",
+    image: "/projects/project13.webp",
+    category: "Residential",
+    description: "Elegant bedroom featuring moon-inspired decor and modern aesthetics",
+  },
+  {
+    id: 14,
+    title: "Modern Living Room with Bar Setup",
+    image: "/projects/project14.webp",
+    category: "Residential",
+    description: "A luxurious living room featuring a bar setup, elegant lighting, and modern decor.",
+  },
+  {
+    id: 15,
+    title: "Elegant Restaurant Dining Area",
+    image: "/projects/project15.webp",
+    category: "Hospitality",
+    description: "A sophisticated restaurant dining area with luxurious seating and ambient lighting.",
   },
 ];
 
@@ -371,6 +405,20 @@ export const clientReviewsData: ClientReview[] = [
     review:
       "Professional and creative! Highly recommend for full house interiors.",
   },
+  {
+    id: 8,
+    name: "Rohit Singh",
+    project: "Office Workspace Design",
+    rating: 4,
+    review: "The workspace design is functional and modern. It has improved productivity and looks great!",
+  },
+  {
+    id: 9,
+    name: "Priya Mehta",
+    project: "Retail Store Interiors",
+    rating: 5,
+    review: "The retail store design is stunning and has attracted more customers. Excellent work by the team!",
+  }
 ];
 
 // YouTube videos data

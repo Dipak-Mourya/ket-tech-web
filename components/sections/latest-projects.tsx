@@ -48,7 +48,7 @@ export function LatestProjects() {
                   />
                   
                   <div className="absolute top-4 left-4 z-20">
-                    <Badge className="bg-white/20 text-accent border-white/30 hover:bg-white/30 px-4 py-2 rounded-full text-xs md:text-sm font-medium shadow-lg backdrop-blur-sm">
+                    <Badge className="bg-white/20 text-white border-white/30 hover:bg-white/30 px-4 py-2 rounded-full text-xs md:text-sm font-medium shadow-lg backdrop-blur-sm">
                       {project.category}
                     </Badge>
                   </div>
