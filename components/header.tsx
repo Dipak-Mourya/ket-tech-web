@@ -107,7 +107,7 @@ export function Header() {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden bg-primary/90 font-extrabold cursor-pointer"
+            className="md:hidden bg-primary/90 hover:bg-primary/100 font-extrabold cursor-pointer"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
