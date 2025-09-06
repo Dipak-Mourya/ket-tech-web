@@ -1,5 +1,6 @@
 import { servicesData } from "@/data";
 import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
 
 export function DesignServices() {
   return (
@@ -27,8 +28,14 @@ export function DesignServices() {
               <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-accent/10 to-transparent"></div>
               
               <CardContent className="p-8 relative">
-                <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-2xl bg-gradient-to-br from-accent/15 to-accent/5 text-accent text-3xl transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 shadow-lg animate-pulse">
-                  {service.icon}
+                <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-2xl  text-accent text-3xl transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 shadow-lg ">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    width={80}
+                    height={80}
+                    className="rounded-2xl object-contain"
+                  />
                 </div>
 
                 <h3 className="text-xl font-semibold mb-4 font-serif text-foreground group-hover:text-accent transition-colors duration-300">

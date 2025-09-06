@@ -64,7 +64,7 @@ export function OurOfferings() {
             >
               <CardContent className="p-8">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-6">
-                  <offering.icon className="h-8 w-8 text-accent" />
+                  <offering.icon className="h-8 w-8 text-accent animate-pulse" />
                 </div>
                 <h3 className="font-sans font-semibold text-xl text-foreground mb-3">
                   {offering.title}

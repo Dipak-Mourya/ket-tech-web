@@ -1,5 +1,3 @@
-import { Home, Building, Ruler, Paintbrush } from "lucide-react";
-
 export interface Project {
   id: number;
   title: string;
@@ -7,14 +5,11 @@ export interface Project {
   category: string;
 }
 
-import type { ReactNode } from "react";
-import React from "react";
-
 export interface Service {
   id: number;
   title: string;
   description: string;
-  icon: ReactNode;
+  image: string;
 }
 
 export interface Testimonial {
@@ -181,28 +176,28 @@ export const servicesData: Service[] = [
     title: "Residential Interior Design",
     description:
       "Elegant, functional homes designed to reflect your lifestyle with comfort and style.",
-    icon: React.createElement(Home, { className: "h-8 w-8 " }),
+    image: "/services/service1.webp",
   },
   {
     id: 2,
     title: "Commercial Interior Design",
     description:
       "Modern, innovative spaces that enhance productivity and create lasting impressions.",
-    icon: React.createElement(Building, { className: "h-8 w-8" }),
+    image: "/services/service2.jpg",
   },
   {
     id: 3,
     title: "3D Design & Visualization",
     description:
       "See your dream space come alive with realistic 3D concepts before execution.",
-    icon: React.createElement(Ruler, { className: "h-8 w-8 " }),
+    image: "/services/service3.jpg",
   },
   {
     id: 4,
     title: "Renovation & Remodeling",
     description:
       "Transform your old interiors into fresh, timeless, and modern spaces.",
-    icon: React.createElement(Paintbrush, { className: "h-8 w-8 " }),
+    image: "/services/service4.jpg",
   },
 ];
 
