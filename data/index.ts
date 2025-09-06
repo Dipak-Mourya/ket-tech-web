@@ -57,7 +57,10 @@ export interface Offering {
   description: string;
 }
 
-
+export interface Customer {
+  name: string;
+  logo: string;
+}
 
 //Cost Estimate data
 export const Claculatorservices: Claculatorservices[] = [
@@ -515,3 +518,20 @@ export const offeringsData: Offering[] = [
       "Stylish, space-saving modular solutions with premium finishes built for modern everyday living.",
   },
 ];
+export const OurCustomerData = [
+  { name: "Parryware", logo: "/clients/client1.webp" },
+  { name: "Jaquar", logo: "/clients/client2.png" },
+  { name: "Johnson", logo: "/clients/client3.png" },
+  { name: "Fevicol", logo: "/clients/client4.png" },
+  { name: "Kut China", logo: "/clients/client5.png" },
+  { name: "Asian Paints", logo: "/clients/client6.jpg" },
+  { name: "Kajaria", logo: "/clients/client7.jpg" },
+  { name: "Virgo", logo: "/clients/client8.png" },
+  { name: "Green Ply", logo: "/clients/client9.png" },
+  { name: "Bosch", logo: "/clients/client10.jpg" },
+  { name: "Mescab", logo: "/clients/client11.jpg" },
+  { name: "Berger", logo: "/clients/client12.png" },
+  { name: "Somany", logo: "/clients/client13.png" },
+  { name: "Saint Gobain", logo: "/clients/client14.png" },
+  { name: "Century Ply", logo: "/clients/client15.png" },
+]
