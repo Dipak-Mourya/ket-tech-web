@@ -1,46 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { offeringsData } from "@/data";
 
-
-import { Brush, Hammer, Gem, Layout, UserCheck, Layers } from "lucide-react";
-
-const offerings = [
-  {
-    icon: Brush,
-    title: "Customized Interior Solutions",
-    description:
-      "Professionally designed interiors tailored to your taste, lifestyle, and budget — making every space truly yours.",
-  },
-  {
-    icon: Hammer,
-    title: "End-to-End Execution",
-    description:
-      "From planning to finishing, we handle everything with precision and care for a hassle-free experience.",
-  },
-  {
-    icon: Gem,
-    title: "Premium Materials & Finishes",
-    description:
-      "We use top-quality materials and refined finishes that combine durability with timeless style.",
-  },
-  {
-    icon: Layout,
-    title: "Smart Space Planning",
-    description:
-      "Maximizing your space with intelligent layouts and functional, efficient design strategies.",
-  },
-  {
-    icon: UserCheck,
-    title: "Personalized Consultation",
-    description:
-      "We listen, understand, and design around your vision to create spaces that truly inspire.",
-  },
-  {
-    icon: Layers,
-    title: "Modular Kitchen & Wardrobes",
-    description:
-      "Stylish, space-saving modular solutions with premium finishes built for modern everyday living.",
-  },
-];
+import Image from "next/image";
 
 export function OurOfferings() {
   return (
@@ -57,14 +18,22 @@ export function OurOfferings() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {offerings.map((offering, index) => (
+          {offeringsData.map((offering, index) => (
             <Card
               key={index}
               className="text-center hover:shadow-lg transition-shadow"
             >
               <CardContent className="p-8">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-6">
-                  <offering.icon className="h-8 w-8 text-accent animate-pulse" />
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10  mb-6">
+                  <Image
+                    draggable={false}
+                    loading="lazy"
+                    src={offering.image}
+                    alt={offering.title}
+                    width={64}
+                    height={64}
+                    className="object-contain"
+                  />
                 </div>
                 <h3 className="font-sans font-semibold text-xl text-foreground mb-3">
                   {offering.title}

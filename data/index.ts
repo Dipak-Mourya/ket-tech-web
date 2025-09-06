@@ -50,6 +50,13 @@ interface Claculatorservices {
   id: string;
   name: string;
 }
+export interface Offering {
+  image: string;
+  title: string;
+  description: string;
+}
+
+
 
 //Cost Estimate data
 export const Claculatorservices: Claculatorservices[] = [
@@ -419,4 +426,44 @@ export const futureGoals = [
   "Innovate with VR & advanced 3D technology",
   "Create landmark signature projects",
   "Strengthen long-term client relationships",
+];
+
+//Offering Data
+export const offeringsData: Offering[] = [
+  {
+    image: "/offering/offer1.png",
+    title: "Customized Interior Solutions",
+    description:
+      "Professionally designed interiors tailored to your taste, lifestyle, and budget — making every space truly yours.",
+  },
+  {
+    image: "/offering/offer2.png",
+    title: "End-to-End Execution",
+    description:
+      "From planning to finishing, we handle everything with precision and care for a hassle-free experience.",
+  },
+  {
+    image: "/offering/offer3.webp",
+    title: "Premium Materials & Finishes",
+    description:
+      "We use top-quality materials and refined finishes that combine durability with timeless style.",
+  },
+  {
+    image: "/offering/offer4.webp",
+    title: "Smart Space Planning",
+    description:
+      "Maximizing your space with intelligent layouts and functional, efficient design strategies.",
+  },
+  {
+    image: "/offering/offer5.webp",
+    title: "Personalized Consultation",
+    description:
+      "We listen, understand, and design around your vision to create spaces that truly inspire.",
+  },
+  {
+    image: "/offering/offer6.png",
+    title: "Modular Kitchen & Wardrobes",
+    description:
+      "Stylish, space-saving modular solutions with premium finishes built for modern everyday living.",
+  },
 ];
