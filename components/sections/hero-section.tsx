@@ -53,7 +53,7 @@ export function HeroSection() {
                 onClick={() => setShowMobileCalculator(true)}
                 className="bg-foreground text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 md:text-lg text-sm cursor-pointer"
               >
-                Book A Free Consultation
+                Request a Quote
               </Button>
             </div>
           </div>

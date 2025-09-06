@@ -3,7 +3,7 @@
 // Header, Footer and WhatsAppButton are provided by the root layout
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { Star, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { projectsData, clientReviewsData } from "@/data";
@@ -12,13 +12,14 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Badge } from "../ui/badge";
 import Image from "next/image";
+import { CostCalculator } from "../cost-calculator";
 
 export function ProjectsContent() {
   const getInitials = (name: string): string => {
     return name
-      .split(' ')
-      .map(word => word.charAt(0).toUpperCase())
-      .join('');
+      .split(" ")
+      .map((word) => word.charAt(0).toUpperCase())
+      .join("");
   };
   return (
     <main className="min-h-screen">
@@ -129,17 +130,17 @@ export function ProjectsContent() {
             >
               {clientReviewsData.map((review) => (
                 <SwiperSlide key={review.id}>
-                  <Card className="p-8 text-center">
+                  <Card className="p-4 text-center">
                     {/* Avatar with initials */}
                     <div className="flex justify-center mb-4">
-                      <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center shadow-md">
-                        <span className="text-white font-semibold text-sm">
+                      <div className="w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center shadow-md">
+                        <span className="text-white font-semibold text-lg">
                           {getInitials(review.name)}
                         </span>
                       </div>
                     </div>
 
-                    <div className="flex justify-center mb-4">
+                    <div className="flex justify-center mb-2">
                       <div className="flex space-x-1">
                         {[...Array(review.rating)].map((_, i) => (
                           <Star
@@ -165,9 +166,9 @@ export function ProjectsContent() {
               ))}
             </Swiper>
 
-            <div className="flex justify-center items-center space-x-6 mt-8">
+            <div className="flex justify-center items-center space-x-6 mt-6">
               <button
-                className="w-9 h-9 bg-accent hover:bg-accent/90 text-accent-foreground rounded-full flex items-center justify-center cursor-pointer transition-colors shadow-md"
+                className="w-9 h-9 bg-primary hover:bg-primary/90 text-accent-foreground rounded-full flex items-center justify-center cursor-pointer transition-colors shadow-md"
                 onClick={() => {
                   const swiper = (
                     document.querySelector(".reviews-swiper") as any
@@ -181,7 +182,7 @@ export function ProjectsContent() {
               <div className="swiper-pagination !static !w-auto flex space-x-2"></div>
 
               <button
-                className="w-9 h-9 bg-accent hover:bg-accent/90 text-accent-foreground rounded-full flex items-center justify-center cursor-pointer transition-colors shadow-md"
+                className="w-9 h-9 bg-primary hover:bg-primary/90 text-accent-foreground rounded-full flex items-center justify-center cursor-pointer transition-colors shadow-md"
                 onClick={() => {
                   const swiper = (
                     document.querySelector(".reviews-swiper") as any
@@ -212,7 +213,28 @@ export function ProjectsContent() {
         </div>
       </section>
 
-      {/* Footer and WhatsAppButton rendered by root layout */}
+      {/* Call to Action */}
+      <section className="pb-10 bg-muted/30 text-primary">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+            {/* Text Section */}
+            <div className="text-left max-w-4xl">
+              <h2 className="font-serif font-bold text-3xl md:text-4xl mb-6">
+                Shape Your Space, Define Your Style
+              </h2>
+              <p className="font-sans text-sm md:text-lg lg:text-xl mb-8 opacity-90 leading-relaxed text-accent">
+                We listen, we design, we deliver. Let's turn your space into
+                something truly yours with creativity, care, and craftsmanship.
+              </p>
+            </div>
+
+            {/* Calculator Section */}
+            <div className="w-full max-w-sm">
+              <CostCalculator heading="Request Cost Estimate" />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

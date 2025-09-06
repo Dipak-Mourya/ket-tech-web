@@ -12,24 +12,15 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { X } from "lucide-react";
+import { Claculatorservices } from "@/data";
 
-interface Service {
-  id: string;
-  name: string;
-  price: number;
+
+
+interface CostCalculatorProps {
+  heading?: string;
 }
 
-const services: Service[] = [
-  { id: "residential-interiors", name: "Residential Interiors", price: 60000 },
-  { id: "office-workspace-design", name: "Office & Workspace Design", price: 75000 },
-  { id: "retail-commercial-interiors", name: "Retail & Commercial Interiors", price: 80000 },
-  { id: "modular-kitchens-wardrobes", name: "Modular Kitchens & Wardrobes", price: 50000 },
-  { id: "3d-design-visualization", name: "3D Design & Visualization", price: 40000 },
-  { id: "turnkey-projects", name: "Turnkey Projects", price: 100000 },
-  { id: "renovation-remodeling", name: "Renovation & Remodeling", price: 70000 },
-];
-
-export function CostCalculator() {
+export function CostCalculator({ heading = "Get Your Instant Quote" }: CostCalculatorProps) {
   const [name, setName] = useState("");
   const [contact, setContact] = useState("");
   const [selectedService, setSelectedService] = useState("");
@@ -37,7 +28,7 @@ export function CostCalculator() {
   const [errors, setErrors] = useState<{contact?: string}>({});
 
   const getSelectedServicePrice = () => {
-    const service = services.find((s) => s.id === selectedService);
+    const service = Claculatorservices.find((s) => s.id === selectedService);
     return service?.price || 0;
   };
 
@@ -96,7 +87,7 @@ export function CostCalculator() {
   const handleWhatsApp = () => {
     const price = getSelectedServicePrice();
     const selectedServiceName =
-      services.find((s) => s.id === selectedService)?.name || "";
+      Claculatorservices.find((s) => s.id === selectedService)?.name || "";
 
     const contactLabel = contactType === 'email' ? 'Email' : 'Phone';
     const message = `Hi! I'm ${name}. I'm interested in your interior design services.
@@ -118,8 +109,8 @@ Please provide me with a detailed quote.`;
 
   return (
     <div className="bg-slate-50 backdrop-blur-sm rounded-lg p-6 shadow-xl max-w-sm w-full">
-      <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">
-        Get Instant Quote
+      <h3 className="text-2xl font-serif font-bold text-primary mb-6 text-center">
+        {heading}
       </h3>
 
       {/* Name Input */}
@@ -175,7 +166,7 @@ Please provide me with a detailed quote.`;
               <SelectValue placeholder="Select a service" />
             </SelectTrigger>
             <SelectContent>
-              {services.map((service) => (
+              {Claculatorservices.map((service) => (
                 <SelectItem key={service.id} value={service.id}>
                   {service.name}
                 </SelectItem>
@@ -217,8 +208,24 @@ Please provide me with a detailed quote.`;
         disabled={!hasSelection}
         className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
       >
-        {hasSelection ? "Get Quote on WhatsApp" : "Select service to get quote"}
+        {hasSelection ? "Get Quote on WhatsApp" : "Enter details to continue"}
       </Button>
+
+      {/* Reset Button */}
+      {hasSelection && (
+        <Button
+          onClick={() => {
+            setName("");
+            setContact("");
+            setSelectedService("");
+            setContactType(null);
+            setErrors({});
+          }}
+          className="w-full bg-primary text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 mt-4 cursor-pointer"
+        >
+          Reset
+        </Button>
+      )}
     </div>
   );
 }
