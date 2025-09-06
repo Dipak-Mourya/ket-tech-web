@@ -1,4 +1,4 @@
-import { Phone, Mail } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 export function Location() {
   return (
@@ -30,9 +30,15 @@ export function Location() {
                 <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
                 Visit Our Office
               </h3>
-              <p className="font-sans text-sm md:text-base text-muted-foreground leading-relaxed">
-                45/4, Beleghata Main Road, Kolkata - 700010, West Bengal, India
-              </p>
+              <div className="flex items-center space-x-3 group">
+                <span className="p-1.5 bg-accent/10 rounded-lg">
+                  <MapPin className="h-4 w-4 text-accent" />
+                </span>
+                <p className="font-sans text-sm md:text-base text-muted-foreground leading-relaxed">
+                  45/4, Beleghata Main Road, Kolkata - 700010, West Bengal,
+                  India
+                </p>
+              </div>
             </div>
 
             <div className="group p-4 rounded-xl bg-gradient-to-r from-white/60 to-white/30 backdrop-blur-sm border border-white/20 shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
@@ -63,11 +69,13 @@ export function Location() {
               </h3>
               <div className="space-y-1 font-sans text-sm md:text-base text-muted-foreground">
                 <div className="flex justify-between items-center">
-                  <span>Monday to Saturday:</span> 
-                  <span className="text-accent font-medium">9:30 AM – 7:30 PM</span>
+                  <span>Monday to Saturday:</span>
+                  <span className="text-accent font-medium">
+                    9:30 AM – 7:30 PM
+                  </span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span>Sunday:</span> 
+                  <span>Sunday:</span>
                   <span className="text-muted-foreground/80">Closed</span>
                 </div>
               </div>

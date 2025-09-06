@@ -2,8 +2,7 @@
 
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Calendar, CalendarArrowDown, Clock, Menu, X } from "lucide-react";
-import { Star } from "lucide-react";
+import { Calendar,  Menu, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
@@ -108,17 +107,17 @@ export function Header() {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden bg-neutral-800 font-extrabold cursor-pointer"
+            className="md:hidden bg-foreground hover:bg-primary/100 font-extrabold cursor-pointer"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
               <X
-                className="h-10 w-10 stroke-[2] rounded-lg bg-neutral-800 p-0 text-accent-foreground font-extrabold cursor-pointer"
+                className="h-10 w-10 stroke-[2] rounded-lg bg-transparent p-0 text-accent-foreground font-extrabold cursor-pointer"
                 size={24}
               />
             ) : (
               <Menu
-                className="h-20 w-20 stroke-[2] rounded-lg bg-neutral-800 p-0 text-accent-foreground font-extrabold cursor-pointer"
+                className="h-20 w-20 stroke-[2] rounded-lg bg-transparent p-0 text-accent-foreground font-extrabold cursor-pointer"
                 size={24}
               />
             )}
@@ -177,7 +176,7 @@ export function Header() {
       <AppointmentForm
         isOpen={showAppointmentModal}
         onClose={() => setShowAppointmentModal(false)}
-        buttonText="Book Your Appointment"
+        buttonText="Schedule Your Appointment"
       />
     </header>
   );

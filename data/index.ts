@@ -51,23 +51,52 @@ interface InfoSection {
   title: string;
   content: string;
 }
+interface Claculatorservices {
+  id: string;
+  name: string;
+}
+
+//Cost Estimate data
+export const Claculatorservices: Claculatorservices[] = [
+  { id: "residential-interiors", name: "Residential Interiors" },
+  {
+    id: "office-workspace-design",
+    name: "Office & Workspace Design",
+  },
+  {
+    id: "retail-commercial-interiors",
+    name: "Retail & Commercial Interiors",
+  },
+  {
+    id: "modular-kitchens-wardrobes",
+    name: "Modular Kitchens & Wardrobes",
+  },
+  {
+    id: "3d-design-visualization",
+    name: "3D Design & Visualization",
+  },
+  { id: "turnkey-projects", name: "Turnkey Projects" },
+  {
+    id: "renovation-remodeling",
+    name: "Renovation & Remodeling",
+  },
+];
 
 //Info data
 export const infoSections: InfoSection[] = [
   {
     title: "Our Mission",
-    content: `At Ket Design, our mission is to create interiors that go beyond aesthetics—spaces that tell stories, reflect personalities, and enhance everyday living. Since 2015, we’ve been passionate about designing environments that balance beauty with functionality, tradition with modernity, and creativity with comfort. We aim to make exceptional design accessible, ensuring every home, office, or commercial space we create not only meets clients’ needs but also inspires them. Our mission is to transform ideas into timeless designs that bring joy, purpose, and value.`,
+    content: `At Ket Design, our mission is to create interiors that go beyond aesthetics—spaces that tell stories, reflect personalities, and enhance everyday living. Since 2015, we've been passionate about balancing beauty with functionality, tradition with modernity, and creativity with comfort. We strive to deliver designs that are timeless, inspiring, and meaningful.`,
   },
   {
     title: "Our Vision",
-    content: `Our vision is to create spaces that inspire, offer comfort, and reflect the unique identity of every individual or brand. We believe great design goes beyond aesthetics—it should elevate lifestyles, evoke emotion, and stand the test of time. We balance elegance, innovation, and functionality in every project, crafting interiors that exceed expectations—spaces that feel personal, purposeful, and enduring.`,
+    content: `Our vision is to craft spaces that inspire, provide comfort, and reflect unique identities. We believe great design should elevate lifestyles, evoke emotion, and stand the test of time—combining elegance, innovation, and functionality to exceed expectations.`,
   },
   {
     title: "Our Scope",
-    content: `Our scope goes beyond decorating interiors—we create spaces that inspire, function seamlessly, and endure. Serving residential, commercial, and corporate clients, each project is driven by creativity, precision, and deep client understanding. From tailored residential interiors to modern workspaces and retail environments, we deliver thoughtful, functional, and lasting spaces through smooth turnkey solutions from concept to completion.`,
+    content: `We design more than just interiors—we create purposeful, enduring spaces. From homes to offices and retail environments, every project is shaped by creativity, precision, and a deep understanding of client needs. Our turnkey solutions ensure a smooth journey from concept to completion.`,
   },
 ];
-
 
 // Projects data
 export const projectsData: Project[] = [
@@ -267,7 +296,7 @@ export const statisticsData: Statistic[] = [
   },
   {
     id: 2,
-    number: "8",
+    number: "10",
     label: "Years Experience",
     suffix: "+",
   },
@@ -316,24 +345,21 @@ export const clientReviewsData: ClientReview[] = [
     name: "Jayanti Panda",
     project: "Home Renovation",
     rating: 5,
-    review:
-      "Amazing team, flawless execution & on-time delivery.",
+    review: "Amazing team, flawless execution & on-time delivery.",
   },
   {
     id: 5,
     name: "Pritish Sen",
     project: "Custom Interiors",
     rating: 5,
-    review:
-      "Very nice work 👌👌👷👷",
+    review: "Very nice work 👌👌👷👷",
   },
   {
     id: 6,
     name: "Anushree Das",
     project: "Modular Kitchen & Wardrobe",
     rating: 5,
-    review:
-      "Loved the quality and finish. They really care about the details.",
+    review: "Loved the quality and finish. They really care about the details.",
   },
   {
     id: 7,
@@ -344,7 +370,6 @@ export const clientReviewsData: ClientReview[] = [
       "Professional and creative! Highly recommend for full house interiors.",
   },
 ];
-
 
 // YouTube videos data
 export const youtubeVideosData = [
@@ -383,20 +408,20 @@ export const companyInfo = {
   },
 };
 
-  export const services = [
-    "Residential Interior Design",
-    "Commercial & Office Spaces",
-    "Modular Kitchens & Wardrobes",
-    "3D Design & Visualization",
-    "Turnkey Project Solutions",
-    "Space Planning & Consultation",
-  ];
+export const services = [
+  "Residential Interior Design",
+  "Commercial & Office Spaces",
+  "Modular Kitchens & Wardrobes",
+  "3D Design & Visualization",
+  "Turnkey Project Solutions",
+  "Space Planning & Consultation",
+];
 
-export  const futureGoals = [
-    "Expand across major Indian cities",
-    "Integrate smart & sustainable designs",
-    "Enhance turnkey project solutions",
-    "Innovate with VR & advanced 3D technology",
-    "Create landmark signature projects",
-    "Strengthen long-term client relationships",
-  ];
+export const futureGoals = [
+  "Expand across major Indian cities",
+  "Integrate smart & sustainable designs",
+  "Enhance turnkey project solutions",
+  "Innovate with VR & advanced 3D technology",
+  "Create landmark signature projects",
+  "Strengthen long-term client relationships",
+];

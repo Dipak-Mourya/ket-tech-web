@@ -1,12 +1,10 @@
-"use client"
+"use client";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import {  futureGoals, infoSections, services } from "@/data";
-import { useRouter, usePathname } from "next/navigation";
+import { futureGoals, infoSections, services } from "@/data";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import {
- 
   Target,
   Eye,
   Compass,
@@ -14,31 +12,18 @@ import {
   TrendingUp,
   Star,
   Building2,
+  X,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { CostCalculator } from "./cost-calculator";
+import { useState } from "react";
 
 export default function AboutPage() {
-    const router = useRouter();
-    const pathname = usePathname();
+ const [showMobileCalculator, setShowMobileCalculator] = useState(false);
 
   const handleContactClick = () => {
-    if (pathname === "/") {
-      // If on home page, just scroll to contact section
-      const element = document.getElementById("contact");
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    } else {
-      // If on other pages, navigate to home page and then scroll to contact
-      router.push("/");
-      setTimeout(() => {
-        const element = document.getElementById("contact");
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-        }
-      }, 100);
-    }
+     setShowMobileCalculator(true);
   };
 
   return (
@@ -375,19 +360,43 @@ export default function AboutPage() {
               enhances your lifestyle. Experience the KET Design difference.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-             
-             
-                <Button
+              <Button
                 onClick={handleContactClick}
-                  variant="outline"
-                  className="border-white text-primary hover:bg-white hover:text-primary font-sans font-medium px-8 py-3 cursor-pointer"
-                >
-                  Begin Your Journey
-                </Button>
+                variant="outline"
+                className="border-white text-primary hover:bg-white hover:text-primary font-sans font-medium px-8 py-3 cursor-pointer"
+              >
+                Begin Your Journey
+              </Button>
             </div>
           </div>
         </div>
       </section>
+      {showMobileCalculator && (
+        <div className="fixed inset-0 z-50">
+          {/* Backdrop */}
+          <div
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            onClick={() => setShowMobileCalculator(false)}
+          />
+
+          {/* Modal Content */}
+          <div className="relative flex items-center justify-center min-h-screen p-4">
+            <div className="relative w-full max-w-sm">
+              {/* Close Button */}
+              <button
+                onClick={() => setShowMobileCalculator(false)}
+                className="absolute -top-12 right-0 p-2 text-white hover:bg-white/20 rounded-full transition-colors cursor-pointer"
+                aria-label="Close calculator"
+              >
+                <X className="h-6 w-6" />
+              </button>
+
+              {/* Calculator */}
+              <CostCalculator />
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
