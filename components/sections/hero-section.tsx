@@ -26,7 +26,7 @@ export function HeroSection() {
         tabIndex={-1}
         aria-hidden="true"
       >
-        <source src="/video/home-bg.mp4" type="video/mp4" />
+        <source src="/video/home-bg1.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
