@@ -49,7 +49,7 @@ export const seoConfigs = {
     description:
       "Discover KET Design's creative architecture, interior design, and project solutions. Explore our work, client reviews, and connect with us for professional design services.",
     keywords: "KET Design, architecture services, interior design, modern design projects, design company India",
-    ogImage: "/og-graph/og-home.webp",
+    ogImage: "/og-graph/og-graph-home.jpg",
     url: "https://ketdesign.com/",
   },
   about: {
@@ -58,7 +58,7 @@ export const seoConfigs = {
       "Learn more about KET Design — our company profile, mission, vision, values, and the innovative approach that sets us apart in architecture and interior design.",
     keywords:
       "about KET Design, design company profile, mission and vision, architecture firm India, interior design company",
-    ogImage: "/og-graph/og-about.webp",
+    ogImage: "/og-graph/og-graph-about.jpg",
     url: "https://ketdesign.com/about",
   },
   projects: {
@@ -66,7 +66,7 @@ export const seoConfigs = {
     description:
       "Explore KET Design's portfolio — innovative projects, creative designs, and client success stories. See our customer reviews and discover why clients trust us.",
     keywords: "KET Design projects, design portfolio, architecture projects, interior design work, client reviews",
-    ogImage: "/og-graph/og-about.webp",
+    ogImage: "/og-graph/og-graph-project.jpg",
     url: "https://ketdesign.com/projects",
   },
 }
