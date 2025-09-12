@@ -206,7 +206,7 @@ export function AppointmentForm({
             >
               <X className="h-4 w-4" />
             </Button>
-            <CardTitle className="font-sans xl:text-2xl lg:xl sm:xl text-center pr-12 my-3">
+            <CardTitle className="font-sans xl:text-2xl lg:xl sm:xl text-center pr-12 my-3  text-foreground">
               {buttonText}
             </CardTitle>
           </CardHeader>

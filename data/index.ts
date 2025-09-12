@@ -227,21 +227,21 @@ export const servicesData: Service[] = [
     title: "Commercial Interior Design",
     description:
       "Modern, innovative spaces that enhance productivity and create lasting impressions.",
-    image: "/services/service2.jpg",
+    image: "/services/service2.webp",
   },
   {
     id: 3,
     title: "3D Design & Visualization",
     description:
       "See your dream space come alive with realistic 3D concepts before execution.",
-    image: "/services/service3.jpg",
+    image: "/services/service3.webp",
   },
   {
     id: 4,
     title: "Renovation & Remodeling",
     description:
       "Transform your old interiors into fresh, timeless, and modern spaces.",
-    image: "/services/service4.jpg",
+    image: "/services/service4.webp",
   },
 ];
 
@@ -482,13 +482,13 @@ export const futureGoals = [
 //Offering Data
 export const offeringsData: Offering[] = [
   {
-    image: "/offering/offer1.png",
+    image: "/offering/offer1.webp",
     title: "Customized Interior Solutions",
     description:
       "Professionally designed interiors tailored to your taste, lifestyle, and budget — making every space truly yours.",
   },
   {
-    image: "/offering/offer2.png",
+    image: "/offering/offer2.webp",
     title: "End-to-End Execution",
     description:
       "From planning to finishing, we handle everything with precision and care for a hassle-free experience.",
@@ -512,7 +512,7 @@ export const offeringsData: Offering[] = [
       "We listen, understand, and design around your vision to create spaces that truly inspire.",
   },
   {
-    image: "/offering/offer6.png",
+    image: "/offering/offer6.webp",
     title: "Modular Kitchen & Wardrobes",
     description:
       "Stylish, space-saving modular solutions with premium finishes built for modern everyday living.",

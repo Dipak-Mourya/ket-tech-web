@@ -335,7 +335,7 @@ export function ContactForm({
                     type="button"
                     size="sm"
                     disabled={isSubmitting}
-                    className="md:w-32 w-32 bg-foreground text-white font-sans font-medium cursor-pointer"
+                    className="md:w-32 w-32 text-accent bg-white hover:bg-accent hover:text-white font-sans font-medium cursor-pointer"
                     onClick={() => {
                       setFormData({
                         firstName: "",

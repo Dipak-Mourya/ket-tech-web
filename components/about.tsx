@@ -107,7 +107,7 @@ export default function AboutPage() {
               <div className="order-2 lg:order-2">
                 <Card className="overflow-hidden shadow-xl">
                   <Image
-                    src="/about/modern-office-interior-design-team-workspace.webp"
+                    src="/about/why-choose-us.webp"
                     alt="KET Design team workspace"
                     width={800}
                     height={600}
